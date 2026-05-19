@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_URL}/a-propos`,
   },
+  openGraph: {
+    title: "À propos | Prêts CHF Info",
+    description:
+      "Découvrez la vocation de Prêts CHF Info, site indépendant d'information sur les prêts immobiliers en francs suisses, le risque de change et les critères d'analyse d'un dossier CHF.",
+    url: `${SITE_URL}/a-propos`,
+    siteName: "Prêts CHF Info",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "À propos | Prêts CHF Info",
+    description:
+      "Découvrez la vocation de Prêts CHF Info, site indépendant d'information sur les prêts immobiliers en francs suisses.",
+  },
 };
 
 const featuresCards = [
