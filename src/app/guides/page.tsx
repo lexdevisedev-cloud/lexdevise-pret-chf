@@ -74,6 +74,14 @@ const activeGuides = [
     slug: "c-est-quoi-un-contentieux-bancaire",
     readingTime: "6 min",
   },
+  {
+    category: "Contentieux",
+    title: "Conséquences d'un contentieux bancaire",
+    description:
+      "Les conséquences possibles d'un contentieux bancaire : amiables, financières, documentaires et juridiques — avec le cas particulier des prêts immobiliers en francs suisses.",
+    slug: "consequences-contentieux-bancaire",
+    readingTime: "7 min",
+  },
 ];
 
 const howToSteps = [
