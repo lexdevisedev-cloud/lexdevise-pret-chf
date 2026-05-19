@@ -54,6 +54,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     },
     {
+      url: `${BASE_URL}/guides/pret-toxique-franc-suisse`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${BASE_URL}/guides/contentieux-bancaire-pret-chf`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${BASE_URL}/guides/dernieres-jurisprudences-franc-suisse-particuliers`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
       url: `${BASE_URL}/blog/clause-abusive-pret-chf`,
       lastModified: new Date(),
       changeFrequency: "monthly",

@@ -908,6 +908,13 @@ export default function JurisprudencePage() {
               style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
             >
               documents à vérifier pour un prêt CHF
+            </Link>.{" "}
+            Pour une synthèse des décisions applicables aux particuliers, consultez le{" "}
+            <Link
+              href="/guides/dernieres-jurisprudences-franc-suisse-particuliers"
+              style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+            >
+              guide sur les dernières jurisprudences franc suisse
             </Link>.
           </div>
         </div>

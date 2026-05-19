@@ -34,26 +34,29 @@ const activeGuides = [
     slug: "pret-en-devise-chf-credit-mutuel",
     readingTime: "8 min",
   },
-];
-
-const comingGuides = [
   {
     category: "Situations particulières",
     title: "Prêt toxique en francs suisses",
     description:
-      "Identifier les caractéristiques d'un prêt CHF présentant un risque de change mal encadré et comprendre les critères jurisprudentiels retenus.",
+      "Comprendre pourquoi certains prêts immobiliers en francs suisses sont perçus comme toxiques : risque de change, capital restant dû, clauses et information bancaire.",
+    slug: "pret-toxique-franc-suisse",
+    readingTime: "8 min",
   },
   {
     category: "Contentieux",
     title: "Contentieux bancaire prêt CHF",
     description:
-      "Comprendre les différentes phases d'un contentieux lié à un prêt immobilier en francs suisses et les documents utiles à chaque étape.",
+      "Les principales causes de litige liées aux prêts immobiliers en francs suisses : risque de change, information précontractuelle, clauses et documents à vérifier.",
+    slug: "contentieux-bancaire-pret-chf",
+    readingTime: "8 min",
   },
   {
     category: "Jurisprudence",
     title: "Dernières jurisprudences franc suisse pour particuliers",
     description:
-      "Synthèse des décisions récentes concernant les particuliers ayant souscrit un prêt CHF en France, avec les critères retenus par les juridictions.",
+      "Synthèse pédagogique des décisions récentes — Cour de cassation 2024 et 2025, CJUE — concernant les particuliers ayant souscrit un prêt CHF en France.",
+    slug: "dernieres-jurisprudences-franc-suisse-particuliers",
+    readingTime: "7 min",
   },
 ];
 
@@ -107,6 +110,7 @@ const jsonLd = {
         name: g.title,
       })),
     },
+
   ],
 };
 
@@ -176,17 +180,6 @@ export default function GuidesPage() {
                     >
                       Lire le guide →
                     </Link>
-                  </div>
-                </article>
-              ))}
-
-              {comingGuides.map((guide) => (
-                <article key={guide.title} className="blog-card blog-card--coming" aria-hidden="true">
-                  <span className="blog-card-cat">{guide.category}</span>
-                  <h3 className="blog-card-title">{guide.title}</h3>
-                  <p className="blog-card-desc">{guide.description}</p>
-                  <div className="blog-card-footer">
-                    <span className="blog-card-time">Guide à venir</span>
                   </div>
                 </article>
               ))}
