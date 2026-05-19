@@ -13,6 +13,7 @@ export default function Navbar() {
   const isElig = pathname.startsWith("/eligibilite");
   const isSim = pathname.startsWith("/simulation");
   const isBlog = pathname.startsWith("/blog");
+  const isGuides = pathname.startsWith("/guides");
 
   return (
     <header className="site-header">
@@ -36,6 +37,9 @@ export default function Navbar() {
           </Link>
           <Link href="/blog" className={isBlog ? "nav-active" : ""}>
             Blog
+          </Link>
+          <Link href="/guides" className={isGuides ? "nav-active" : ""}>
+            Guides
           </Link>
         </nav>
 
@@ -98,6 +102,13 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
           >
             Blog
+          </Link>
+          <Link
+            href="/guides"
+            className={`mobile-link${isGuides ? " nav-active" : ""}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Guides
           </Link>
 
           <Link

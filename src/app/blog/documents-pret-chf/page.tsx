@@ -455,6 +455,13 @@ export default function ArticleDocuments() {
             Ces informations figurent généralement dans l'offre de prêt et les
             tableaux d'amortissement.
           </p>
+          <p>
+            Si votre prêt a été souscrit auprès du Crédit Mutuel,{" "}
+            <Link href="/guides/pret-en-devise-chf-credit-mutuel">
+              consultez notre guide dédié aux prêts en devise CHF Crédit Mutuel
+            </Link>{" "}
+            pour connaître les points de vérification spécifiques à cette situation.
+          </p>
 
           {/* FAQ */}
           <section className="article-faq">

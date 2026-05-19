@@ -2426,6 +2426,10 @@ a {
   gap: 8px;
 }
 
+/* Guide card — coming soon state */
+.blog-card--coming { opacity: 0.5; cursor: default; pointer-events: none; }
+.blog-card--coming:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: none; }
+
 .blog-start-section {
   background: #f7faf8;
   border-bottom: 1px solid var(--border);
