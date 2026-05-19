@@ -2,20 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import EligibilityQuiz from "./EligibilityQuiz";
 
-// TODO: Définir NEXT_PUBLIC_SITE_URL dans .env.local (ex: https://pretschfinfo.fr)
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://VOTRE-DOMAINE.fr";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Éligibilité recours prêt CHF : test en 3 questions",
+  title: "Éligibilité recours prêt CHF : test en 3 questions | Prêts CHF Info",
   description:
-    "Testez votre éligibilité à un recours sur un prêt immobilier en francs suisses. 3 questions pour identifier les critères liés au risque de change, au bien financé en France et à l'information bancaire.",
+    "Répondez à 3 questions pour identifier les principaux signaux d'un prêt immobilier en francs suisses ou indexé CHF pouvant justifier une première analyse de votre dossier.",
   alternates: {
     canonical: `${SITE_URL}/eligibilite`,
   },
   openGraph: {
-    title: "Éligibilité recours prêt CHF : test en 3 questions",
+    title: "Éligibilité recours prêt CHF : test en 3 questions | Prêts CHF Info",
     description:
-      "Identifiez en 3 questions si votre prêt immobilier en francs suisses mérite une première vérification.",
+      "Répondez à 3 questions pour identifier les principaux signaux d'un prêt immobilier en francs suisses ou indexé CHF pouvant justifier une première analyse de votre dossier.",
     url: `${SITE_URL}/eligibilite`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
@@ -23,20 +22,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Éligibilité recours prêt CHF : test en 3 questions",
+    title: "Éligibilité recours prêt CHF : test en 3 questions | Prêts CHF Info",
     description:
-      "Identifiez en 3 questions si votre prêt immobilier en francs suisses mérite une première vérification.",
+      "Répondez à 3 questions pour identifier les principaux signaux d'un prêt immobilier en francs suisses ou indexé CHF pouvant justifier une première analyse de votre dossier.",
   },
 };
 
 const FAQ = [
   {
-    q: "Ce test suffit-il à confirmer un recours ?",
-    a: "Non. Ce test est indicatif. Il permet seulement d'identifier des signaux pouvant justifier une première analyse du contrat, des notices et des documents remis par la banque.",
+    q: "Ce test suffit-il à confirmer un recours prêt CHF ?",
+    a: "Non. Il identifie seulement des signaux. L'analyse dépend du contrat, des documents remis, de la situation de l'emprunteur et des délais applicables.",
   },
   {
-    q: "Comment savoir si mon prêt est indexé sur le CHF ?",
-    a: "L'offre de prêt, les conditions particulières, les tableaux d'amortissement et les clauses relatives à la devise permettent généralement de vérifier si le crédit est libellé, remboursable ou indexé sur le franc suisse.",
+    q: "Je ne sais pas si mon prêt est indexé sur le CHF, que faire ?",
+    a: "Il faut vérifier l'offre de prêt, les conditions particulières, les tableaux d'amortissement, les avenants et les clauses relatives à la devise ou à la conversion.",
   },
   {
     q: "Pourquoi le bien situé en France est-il important ?",
@@ -44,23 +43,23 @@ const FAQ = [
   },
   {
     q: "Un frontalier payé en francs suisses peut-il être concerné ?",
-    a: "Oui, potentiellement. Le fait de percevoir des revenus en CHF ne suffit pas toujours à exclure le risque, notamment lorsque le bien financé est situé en France ou lorsque la situation professionnelle évolue.",
+    a: "Oui, notamment si le bien financé est situé en France ou si la situation professionnelle et les revenus ont évolué. La question dépend aussi de l'information remise avant signature.",
   },
   {
-    q: "Pourquoi les explications chiffrées sont-elles importantes ?",
-    a: "Elles peuvent aider à vérifier si l'emprunteur a été mis en mesure de comprendre concrètement l'impact d'une variation du taux de change sur le coût du crédit ou le capital restant dû.",
+    q: "Pourquoi les simulations chiffrées sont-elles importantes ?",
+    a: "Elles peuvent montrer si la banque a concrètement expliqué l'impact possible d'une variation du franc suisse sur le coût du crédit, les échéances ou le capital restant dû.",
   },
   {
     q: "Un prêt CHF déjà remboursé peut-il être analysé ?",
-    a: "Oui, dans certains cas. Il faut notamment examiner les dates, les conditions du remboursement, les documents contractuels et les délais applicables.",
+    a: "Oui, surtout en cas de revente, de remboursement anticipé ou de difficulté à comprendre le coût réel du crédit. Les délais applicables doivent toutefois être vérifiés.",
   },
   {
     q: "Un résultat positif garantit-il une action gagnante ?",
     a: "Non. Un résultat positif signifie seulement que plusieurs critères justifient une analyse plus complète. L'issue dépend des pièces disponibles, de la rédaction du contrat et de la situation de l'emprunteur.",
   },
   {
-    q: "Quels documents dois-je préparer avant une analyse ?",
-    a: "Les documents les plus utiles sont l'offre de prêt, les conditions générales, les conditions particulières, les notices d'information, les simulations chiffrées, les avenants et les échanges avec la banque.",
+    q: "Quels documents dois-je préparer ?",
+    a: "L'offre de prêt, les conditions générales, les conditions particulières, les notices d'information, les simulations chiffrées, les avenants et les échanges avec la banque.",
   },
   {
     q: "Le test fonctionne-t-il pour un prêt in fine ?",
@@ -69,6 +68,10 @@ const FAQ = [
   {
     q: "Le test remplace-t-il une analyse juridique ?",
     a: "Non. Le test est un outil pédagogique. L'analyse dépend du contrat, des documents remis, des délais applicables et de la situation personnelle de l'emprunteur.",
+  },
+  {
+    q: "Le test est-il gratuit ?",
+    a: "Oui, le test d'éligibilité est indicatif et sans engagement. Il sert à orienter une première vérification.",
   },
 ];
 
@@ -265,12 +268,19 @@ export default function EligibilitePage() {
             <p className="eyebrow">Test d&apos;éligibilité indicatif</p>
             <h2>Pourquoi faire un test d&apos;éligibilité recours prêt CHF&nbsp;?</h2>
             <p className="elig-intro-text">
+              Ce test d&apos;éligibilité prêt CHF repose volontairement sur trois
+              critères essentiels : la présence d&apos;un prêt lié au franc suisse, le
+              financement d&apos;un bien situé en France et la qualité de l&apos;information
+              remise par la banque. Il permet d&apos;identifier des signaux utiles, mais
+              ne remplace pas l&apos;analyse de l&apos;offre de prêt, des conditions générales,
+              des notices d&apos;information et des simulations chiffrées.
+            </p>
+            <p className="elig-intro-text" style={{ marginTop: "12px" }}>
               Un prêt immobilier en francs suisses peut présenter des enjeux
               particuliers lorsque le bien financé est situé en France ou
-              lorsque le contrat prévoit un mécanisme lié au CHF. Le test
-              d&apos;éligibilité permet d&apos;identifier rapidement les principaux
-              signaux à vérifier avant d&apos;analyser plus précisément l&apos;offre de
-              prêt, les notices, les simulations et les clauses relatives au{" "}
+              lorsque le contrat prévoit un mécanisme lié au CHF. Pour en savoir
+              plus sur les mécanismes financiers en jeu, consultez notre article
+              sur le{" "}
               <Link href="/blog/risque-change-pret-chf">
                 risque de change d&apos;un prêt CHF
               </Link>.
@@ -484,49 +494,56 @@ export default function EligibilitePage() {
                 <h3>Frontalier suisse</h3>
                 <p>
                   Vous travailliez ou travaillez en Suisse et avez financé un
-                  bien immobilier en France avec un prêt en CHF.
+                  bien immobilier en France avec un prêt en CHF. Le risque peut
+                  s&apos;apprécier sur toute la durée du contrat, pas seulement au
+                  jour de la signature.
                 </p>
               </article>
               <article className="elig-profil-card">
-                <h3>Bien revendu ou revente envisagée</h3>
+                <h3>Emprunteur payé en euros</h3>
+                <p>
+                  Si vos revenus sont en euros mais que votre prêt est lié au
+                  franc suisse, l&apos;évolution du taux EUR/CHF peut modifier le
+                  coût réel du crédit et le montant à rembourser.
+                </p>
+              </article>
+              <article className="elig-profil-card">
+                <h3>Bien immobilier financé en France</h3>
+                <p>
+                  Un bien situé en France est valorisé en euros. Si la dette
+                  reste liée au CHF, un décalage peut apparaître lors d&apos;une
+                  revente ou d&apos;un remboursement anticipé.
+                </p>
+              </article>
+              <article className="elig-profil-card">
+                <h3>Prêt déjà remboursé</h3>
+                <p>
+                  Un prêt soldé ou renégocié peut parfois mériter une
+                  vérification selon les conditions du remboursement, les
+                  documents disponibles et les délais applicables.
+                </p>
+              </article>
+              <article className="elig-profil-card">
+                <h3>Revente ou remboursement anticipé</h3>
                 <p>
                   Une revente en euros peut révéler un décalage avec un capital
-                  restant dû exprimé ou calculé en francs suisses.
+                  restant dû exprimé ou calculé en francs suisses. Idem lors
+                  d&apos;un remboursement anticipé.
                 </p>
               </article>
               <article className="elig-profil-card">
-                <h3>Revenus en CHF modifiés</h3>
+                <h3>Perte ou modification des revenus en CHF</h3>
                 <p>
                   Perte d&apos;emploi suisse, retraite, préretraite ou passage à des
-                  revenus en euros peuvent modifier l&apos;exposition au risque.
-                </p>
-              </article>
-              <article className="elig-profil-card">
-                <h3>Absence de simulation chiffrée</h3>
-                <p>
-                  Vous ne vous souvenez pas avoir reçu d&apos;exemples concrets
-                  montrant l&apos;impact d&apos;une évolution défavorable du taux de change.
-                </p>
-              </article>
-              <article className="elig-profil-card">
-                <h3>Prêt in fine ou long terme</h3>
-                <p>
-                  Lorsque le capital est remboursé en fin de prêt ou sur une
-                  longue durée, l&apos;évolution du franc suisse peut peser davantage
-                  sur le coût réel.
-                </p>
-              </article>
-              <article className="elig-profil-card">
-                <h3>Capital restant dû difficile à comprendre</h3>
-                <p>
-                  Le montant restant à rembourser paraît élevé ou difficile à
-                  rapprocher du montant initialement emprunté.
+                  revenus en euros peuvent modifier l&apos;exposition au risque sur
+                  la durée du prêt.
                 </p>
               </article>
             </div>
             <p className="elig-profils-note">
-              Ces situations peuvent justifier une vérification. Elles ne
-              présument pas d&apos;un recours et ne constituent pas un avis juridique.
+              Ces situations ne suffisent pas à confirmer un recours. Elles
+              indiquent seulement qu&apos;une vérification du contrat et des documents
+              peut être utile.
             </p>
           </div>
         </div>
@@ -626,9 +643,9 @@ export default function EligibilitePage() {
                 <p>
                   Le fait de percevoir des revenus en CHF ne suffit pas toujours
                   à exclure toute exposition au risque de change. Pour en savoir
-                  plus, consultez{" "}
+                  plus, consultez notre article sur le{" "}
                   <Link href="/blog/pret-chf-frontalier">
-                    le guide sur les prêts CHF frontaliers
+                    prêt CHF frontalier
                   </Link>.
                 </p>
               </article>
@@ -641,7 +658,7 @@ export default function EligibilitePage() {
               </article>
             </div>
             <Link href="/jurisprudence" className="secondary-btn">
-              Comprendre la jurisprudence des prêts CHF
+              Comprendre la jurisprudence prêt CHF
             </Link>
           </div>
         </div>
@@ -668,11 +685,13 @@ export default function EligibilitePage() {
               ))}
             </div>
             <p className="elig-docs-note">
-              Si certains documents manquent, une première vérification peut
-              tout de même permettre d&apos;identifier les pièces prioritaires à
-              rechercher.{" "}
+              L&apos;analyse de ces documents permet de vérifier si le risque de
+              change a été présenté de manière claire, concrète et compréhensible
+              pendant toute la durée du prêt. Si certains documents manquent,
+              une première vérification peut permettre d&apos;identifier les pièces
+              prioritaires à rechercher.{" "}
               <Link href="/blog/documents-pret-chf">
-                Voir les documents utiles pour un prêt CHF
+                Voir les documents à vérifier pour un prêt CHF
               </Link>.
             </p>
           </div>
