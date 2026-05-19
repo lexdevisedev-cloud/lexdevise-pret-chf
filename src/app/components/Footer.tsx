@@ -11,6 +11,7 @@ export default function Footer() {
         <nav className="site-footer-links" aria-label="Liens légaux">
           <Link href="/guides">Guides</Link>
           <Link href="/a-propos">À propos</Link>
+          <Link href="/sources-methodologie">Sources</Link>
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/politique-confidentialite">Confidentialité</Link>
         </nav>
