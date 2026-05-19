@@ -1,36 +1,83 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://VOTRE-DOMAINE.fr";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt CHF déjà remboursé : analyse possible ?",
+  title: "Prêt CHF déjà remboursé : analyse possible ? | Prêts CHF Info",
   description:
     "Un prêt en francs suisses déjà remboursé, renégocié ou soldé peut parfois mériter une vérification selon les dates, les documents disponibles et la situation du dossier.",
   alternates: { canonical: `${SITE_URL}/blog/pret-chf-deja-rembourse` },
   openGraph: {
     title: "Prêt CHF déjà remboursé : analyse possible ?",
     description:
-      "Un prêt CHF soldé ou renégocié n'exclut pas forcément toute analyse selon les circonstances.",
+      "Revente, rachat de crédit, prêt soldé à échéance : quelles questions se posent encore après le remboursement d'un prêt CHF ?",
     url: `${SITE_URL}/blog/pret-chf-deja-rembourse`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prêt CHF déjà remboursé : analyse possible ?",
+    description:
+      "Revente, rachat de crédit, prêt soldé à échéance : quelles questions se posent encore après le remboursement d'un prêt CHF ?",
+  },
 };
 
 const faq = [
   {
-    q: "Existe-t-il un délai pour agir sur un prêt CHF remboursé ?",
-    a: "Des délais légaux s'appliquent selon la nature des demandes. Ces délais dépendent du type d'action envisagée, de la date des faits et des circonstances propres au dossier. Un professionnel du droit peut apprécier les délais applicables à une situation spécifique.",
+    q: "Un prêt CHF remboursé peut-il encore être vérifié ?",
+    a: "Le remboursement d'un prêt ne met pas automatiquement fin à toutes les questions qui peuvent se poser sur l'information délivrée lors de la souscription ou les conséquences économiques subies. Des délais légaux s'appliquent selon la nature des demandes et les circonstances propres à chaque dossier.",
   },
   {
-    q: "Un prêt renégocié peut-il encore être analysé ?",
-    a: "Oui, sous réserve des documents disponibles et des délais applicables. La renégociation modifie les conditions du prêt, mais ne supprime pas les questions qui peuvent se poser sur l'information initiale ou sur les conditions de la renégociation elle-même.",
+    q: "Le remboursement anticipé empêche-t-il toute analyse ?",
+    a: "Non. Le remboursement anticipé est souvent le moment où l'impact du risque de change est le plus visible : si le franc suisse s'est apprécié depuis la souscription, le capital soldé en euros peut dépasser le capital initial. Ce surcoût peut être estimé de façon indicative.",
   },
   {
-    q: "Faut-il encore avoir les documents pour une analyse ?",
-    a: "Les documents sont très importants pour permettre une analyse. Même si certaines pièces ont été perdues, il est parfois possible d'en retrouver auprès de la banque, du notaire ou dans des archives personnelles.",
+    q: "Quels documents faut-il retrouver pour un prêt soldé ?",
+    a: "L'offre de prêt initiale, les conditions générales et particulières, les tableaux d'amortissement, le décompte de remboursement final, les avenants et les échanges avec la banque lors du remboursement sont les pièces les plus utiles. La banque est tenue de conserver les contrats et peut en fournir des copies sur demande.",
+  },
+  {
+    q: "Les délais sont-ils importants pour un prêt remboursé ?",
+    a: "Oui. Des délais légaux s'appliquent selon la nature des questions posées, le type d'action envisagée et les dates des faits. Ces délais varient selon les circonstances propres à chaque dossier. Un prêt remboursé il y a plusieurs années peut parfois encore être analysé, mais pas nécessairement dans les mêmes conditions qu'un prêt en cours.",
+  },
+  {
+    q: "La revente du bien révèle-t-elle le risque de change subi ?",
+    a: "Souvent oui. Lors d'une revente, le capital restant dû en CHF doit être soldé. Si le franc suisse s'est apprécié depuis la souscription, ce capital représente une somme plus importante en euros qu'anticipé. Le décompte notarial de la vente permet de reconstituer le montant effectivement payé pour solder le prêt.",
+  },
+];
+
+const situationsCards = [
+  {
+    title: "Revente du bien immobilier",
+    text:
+      "Le prêt a été soldé lors de la cession du bien. Si le CHF s'était apprécié, le capital restant dû en euros au moment de la vente pouvait dépasser la valeur initiale du prêt. Le décompte notarial permet de reconstituer ce montant.",
+  },
+  {
+    title: "Rachat de crédit",
+    text:
+      "Le prêt CHF a été refinancé par un crédit en euros. Les conditions de cette opération — taux de change appliqué, indemnités de remboursement anticipé, nouveau capital — méritent d'être examinées.",
+  },
+  {
+    title: "Renégociation avec la banque",
+    text:
+      "Le prêt a été restructuré ou converti en euros suite à une démarche auprès de l'établissement prêteur. Les modalités de la renégociation (taux, capital converti, clause de sortie) constituent un élément du dossier.",
+  },
+  {
+    title: "Prêt soldé à l'échéance normale",
+    text:
+      "Le prêt a suivi son cours jusqu'au terme prévu. Si le franc suisse s'est apprécié sur la durée, la somme totale remboursée en euros peut dépasser sensiblement le capital initial. Les tableaux d'amortissement permettent d'en estimer l'ampleur.",
+  },
+  {
+    title: "Remboursement anticipé volontaire",
+    text:
+      "L'emprunteur a soldé le prêt avant le terme, par exemple suite à un changement professionnel ou personnel. Le taux de change en vigueur à cette date détermine le montant effectivement remboursé en euros.",
+  },
+  {
+    title: "Héritage ou séparation",
+    text:
+      "Le prêt a été soldé dans le cadre d'une succession ou d'une séparation. Selon les circonstances et les conditions du remboursement, des questions spécifiques peuvent se poser sur la répartition du surcoût lié au change.",
   },
 ];
 
@@ -45,7 +92,7 @@ const jsonLd = {
         "Un prêt soldé ou renégocié n'exclut pas forcément toute analyse. Les dates, les documents et les conditions de remboursement doivent être vérifiés.",
       url: `${SITE_URL}/blog/pret-chf-deja-rembourse`,
       datePublished: "2025-05-13",
-      dateModified: "2025-05-13",
+      dateModified: "2025-05-19",
       inLanguage: "fr-FR",
       author: { "@type": "Organization", name: "Prêts CHF Info" },
       publisher: { "@type": "Organization", name: "Prêts CHF Info" },
@@ -56,7 +103,12 @@ const jsonLd = {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` },
         { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
-        { "@type": "ListItem", position: 3, name: "Prêt CHF déjà remboursé", item: `${SITE_URL}/blog/pret-chf-deja-rembourse` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Prêt CHF déjà remboursé",
+          item: `${SITE_URL}/blog/pret-chf-deja-rembourse`,
+        },
       ],
     },
     {
@@ -96,7 +148,7 @@ export default function ArticlePretDejaSolde() {
               anticipation n'exclut pas nécessairement toute possibilité
               d'analyse. Selon les dates, les documents disponibles et les
               circonstances du remboursement, certains dossiers peuvent encore
-              mériter une vérification. Ce guide explique les éléments à
+              mériter une vérification. Ce guide présente les éléments à
               considérer avec prudence.
             </p>
             <div className="article-meta">
@@ -114,58 +166,120 @@ export default function ArticlePretDejaSolde() {
       <div className="article-body">
         <div className="article-body-inner">
 
-          <h2>Un prêt soldé clôt-il toute question juridique ?</h2>
+          <h2>Pourquoi un prêt remboursé peut encore poser question</h2>
           <p>
             Il est souvent admis, à tort, qu'une fois un prêt remboursé, il ne
             peut plus faire l'objet d'aucune vérification. En réalité, le
-            remboursement d'un prêt ne met pas automatiquement fin à toutes les
-            questions qui peuvent se poser sur l'information donnée lors de la
-            souscription, les conditions contractuelles ou les conséquences
+            remboursement d'un prêt CHF ne met pas automatiquement fin à toutes
+            les questions qui peuvent se poser sur l'information délivrée lors
+            de la souscription, les clauses contractuelles ou les conséquences
             économiques subies.
+          </p>
+          <p>
+            Les{" "}
+            <Link href="/blog/clause-abusive-pret-chf">clauses abusives dans les prêts CHF</Link>{" "}
+            et le{" "}
+            <Link href="/blog/risque-change-pret-chf">risque de change</Link>{" "}
+            existaient au moment de la souscription, indépendamment de ce qui
+            s'est passé ensuite. Le remboursement clôt la relation bancaire,
+            mais pas nécessairement les questions sur les conditions dans
+            lesquelles le contrat a été conclu ou exécuté.
           </p>
           <p>
             Tout dépend de la nature des questions posées, des délais légaux
             applicables et des documents disponibles. Ces éléments sont
             spécifiques à chaque dossier et doivent être appréciés
-            individuellement.
+            individuellement, de préférence avec l'aide d'un professionnel.
           </p>
 
-          <h2>Les différentes situations d'un prêt "remboursé"</h2>
+          <h2>Les situations fréquentes après remboursement</h2>
           <p>
-            Le terme "prêt remboursé" recouvre en réalité plusieurs situations
-            très différentes, qui n'appellent pas le même type d'analyse :
+            Le terme "prêt remboursé" recouvre plusieurs réalités très
+            différentes, qui n'appellent pas le même type d'analyse.
           </p>
-          <ul>
-            <li><strong>Prêt arrivé à échéance normale :</strong> le prêt a suivi son cours naturel, les mensualités ont été honorées jusqu'au terme prévu.</li>
-            <li><strong>Remboursement anticipé :</strong> l'emprunteur a soldé le prêt avant le terme, souvent lors d'une revente du bien ou d'un refinancement. C'est dans ce cas que le taux de change du moment peut avoir eu un impact significatif.</li>
-            <li><strong>Renégociation :</strong> le prêt a été restructuré, parfois converti en euros, avec de nouvelles conditions. Les modalités de cette renégociation peuvent elles aussi faire l'objet d'une analyse.</li>
-            <li><strong>Vente du bien :</strong> le prêt a été soldé suite à la cession du bien immobilier. Si le capital restant dû en CHF excédait le prix de vente converti en euros, une perte de change peut avoir été supportée.</li>
-          </ul>
-
-          <div className="article-retenir">
-            <p className="article-retenir-label">À retenir</p>
-            <ul>
-              <li>Le remboursement d'un prêt CHF ne met pas automatiquement fin à toute analyse possible.</li>
-              <li>Les conditions du remboursement (date, taux de change, montant soldé) sont des éléments importants.</li>
-              <li>Les délais légaux applicables dépendent de la nature des questions et des dates des faits.</li>
-            </ul>
+          <div className="juri-four-grid">
+            {situationsCards.map((card, i) => (
+              <div key={i} className="juri-revirement-card">
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </div>
+            ))}
           </div>
 
-          <h2>L'importance des dates dans un dossier prêt CHF soldé</h2>
+          <h2>Quels documents retrouver après un prêt soldé ?</h2>
           <p>
-            Les dates jouent un rôle central dans l'analyse d'un prêt CHF déjà
-            remboursé. La date de souscription du prêt détermine le contexte
-            réglementaire applicable. La date du remboursement ou de la
-            renégociation fixe le point de référence pour apprécier l'impact du
-            taux de change à ce moment précis.
+            Pour un prêt déjà remboursé, les pièces à réunir sont les mêmes
+            que pour un prêt en cours, auxquelles s'ajoutent les documents
+            liés aux conditions du remboursement.
+          </p>
+          <ul>
+            <li>
+              <strong>L'offre de prêt initiale :</strong> socle contractuel
+              contenant les clauses de devise, de remboursement et de risque de
+              change. La banque est tenue de la conserver et peut en fournir une
+              copie sur demande écrite.
+            </li>
+            <li>
+              <strong>Le décompte de remboursement final :</strong> document
+              remis lors du solde du prêt, précisant le capital restant dû en
+              CHF, le taux de change appliqué le jour du solde, les éventuelles
+              indemnités de remboursement anticipé et le montant total payé.
+            </li>
+            <li>
+              <strong>Les tableaux d'amortissement :</strong> utiles pour
+              retracer l'évolution du capital tout au long de la vie du prêt et
+              estimer l'impact cumulé des variations EUR/CHF.
+            </li>
+            <li>
+              <strong>Les relevés de compte en CHF :</strong> ils permettent de
+              vérifier les versements effectués et de reconstituer l'historique
+              du prêt période par période.
+            </li>
+            <li>
+              <strong>Les actes notariés liés à la revente :</strong> en cas de
+              cession du bien, le compromis, l'acte définitif et le décompte
+              notarial permettent de reconstituer les conditions financières du
+              remboursement.
+            </li>
+            <li>
+              <strong>Les avenants et actes de renégociation :</strong>{" "}
+              indispensables si le prêt a été restructuré ou converti avant
+              d'être soldé.
+            </li>
+            <li>
+              <strong>Les échanges écrits avec la banque :</strong> courriers,
+              e-mails, comptes rendus de rendez-vous lors du remboursement ou
+              de la renégociation.
+            </li>
+          </ul>
+          <p>
+            Pour une liste complète des pièces à réunir,{" "}
+            <Link href="/blog/documents-pret-chf">
+              consultez notre guide sur les documents utiles pour un prêt CHF
+            </Link>
+            .
+          </p>
+
+          <h2>La question des délais et de la prescription</h2>
+          <p>
+            Les délais légaux constituent l'un des points les plus délicats pour
+            les prêts déjà remboursés. Ils varient selon la nature des demandes,
+            le type de contrat, les dates des faits et les circonstances propres
+            à chaque dossier. Il n'existe pas de règle universelle applicable à
+            tous les cas.
           </p>
           <p>
-            Des délais légaux s'appliquent selon la nature des demandes. Ces
-            délais varient selon le type d'action, la nature du contrat et les
-            circonstances propres au dossier. Un prêt remboursé il y a plusieurs
-            années peut parfois encore être analysé, mais pas nécessairement dans
-            les mêmes conditions qu'un prêt encore en cours. Un professionnel
-            peut apprécier ces délais en fonction de la situation spécifique.
+            Un prêt remboursé récemment peut en principe être analysé dans des
+            conditions proches d'un prêt en cours. Un prêt soldé il y a
+            plusieurs années nécessite une appréciation spécifique des délais
+            applicables à la situation. Dans tous les cas, un examen précoce
+            du dossier est préférable à une attente prolongée.
+          </p>
+          <p>
+            Ce point est d'une importance particulière et ne peut être apprécié
+            correctement que dans le cadre d'une analyse personnalisée. Aucune
+            conclusion générale ne peut être tirée sans examen des éléments
+            propres au dossier.
           </p>
 
           <div className="article-inline-cta">
@@ -178,64 +292,78 @@ export default function ArticlePretDejaSolde() {
             </Link>
           </div>
 
-          <h2>Le remboursement anticipé dans un contexte de franc fort</h2>
+          <h2>Le prêt remboursé et la jurisprudence prêt CHF</h2>
           <p>
-            Le remboursement anticipé est souvent le moment où l'impact du risque
-            de change d'un prêt CHF est le plus visible. Si le franc suisse s'est
-            apprécié depuis la souscription, le capital restant dû exprimé en
-            CHF représente une somme plus importante en euros qu'au moment de la
-            signature.
+            La jurisprudence récente sur les prêts CHF ne distingue pas
+            systématiquement les prêts en cours des prêts remboursés pour
+            apprécier les questions relatives à l'information délivrée lors de
+            la souscription. Ce sont les conditions de la conclusion du contrat
+            — et non son état actuel — qui constituent le point d'analyse central.
           </p>
           <p>
-            Un emprunteur qui a soldé son prêt lors d'une revente de bien, d'un
-            refinancement ou d'une renégociation peut ainsi avoir supporté un
-            surcoût lié au change. Ce surcoût peut être estimé de façon indicative
-            grâce à la{" "}
-            <Link href="/simulation">simulation indicative prêt CHF</Link>.
-          </p>
-
-          <h2>La renégociation : un accord qui peut avoir ses propres enjeux</h2>
-          <p>
-            Lorsqu'un prêt CHF a été renégocié — notamment converti en euros —
-            les conditions de cette renégociation méritent attention. À quel taux
-            la conversion a-t-elle été réalisée ? L'emprunteur disposait-il de
-            toutes les informations pour apprécier les conditions proposées ?
-            Y avait-il des alternatives ?
-          </p>
-          <p>
-            Ces questions sont propres à chaque dossier et ne permettent pas de
-            conclure à l'existence d'un recours. Elles indiquent simplement que
-            la renégociation, comme la souscription initiale, peut faire partie
-            des éléments examinés.
-          </p>
-
-          <h2>Les documents à conserver ou à retrouver</h2>
-          <p>
-            Pour un prêt déjà remboursé, les documents utiles à une analyse
-            incluent l'offre de prêt originale, les conditions générales et
-            particulières, les tableaux d'amortissement, le relevé de
-            remboursement final, les éventuels avenants et les échanges avec la
-            banque au moment du remboursement.
-          </p>
-          <p>
-            Pour plus de détails sur les pièces à réunir,{" "}
-            <Link href="/blog/documents-pret-chf">
-              consultez notre guide sur les documents utiles pour un prêt CHF
-            </Link>
-            .
-          </p>
-
-          <h2>Jurisprudence et prêts soldés</h2>
-          <p>
-            La jurisprudence récente n'exclut pas les prêts déjà remboursés du
-            champ des analyses possibles. Mais les conditions d'une telle analyse
-            dépendent étroitement des circonstances, des délais et des pièces
-            disponibles. Pour comprendre les évolutions jurisprudentielles,{" "}
+            Les{" "}
+            <Link href="/blog/cour-cassation-9-juillet-2025-pret-chf">
+              arrêts de la Cour de cassation du 9 juillet 2025
+            </Link>{" "}
+            ont précisé les critères d'appréciation des clauses relatives au
+            risque de change, sans exclure les prêts soldés du champ d'analyse
+            possible. Pour comprendre ces évolutions,{" "}
             <Link href="/jurisprudence">
               consultez notre page dédiée à la jurisprudence des prêts CHF
             </Link>
             .
           </p>
+
+          <h2>Comment commencer une première vérification ?</h2>
+          <ol>
+            <li>
+              <strong>Identifier le type de remboursement :</strong> prêt arrivé
+              à échéance, remboursement anticipé, rachat de crédit ou revente.
+              Chaque situation appelle une approche spécifique.
+            </li>
+            <li>
+              <strong>Rassembler les documents disponibles :</strong> offre de
+              prêt initiale, décompte de remboursement final, tableaux
+              d'amortissement, avenants, échanges écrits. Si des pièces
+              manquent, une demande à la banque permet souvent de les obtenir.
+            </li>
+            <li>
+              <strong>Estimer l'impact du change :</strong> la{" "}
+              <Link href="/simulation">simulation indicative prêt CHF</Link>{" "}
+              permet d'obtenir un ordre de grandeur sur l'écart entre le capital
+              initial et les sommes effectivement versées en euros.
+            </li>
+            <li>
+              <strong>Vérifier les grandes dates :</strong> date de souscription,
+              date de remboursement ou de renégociation, taux de change EUR/CHF
+              à ces moments clés. Ces informations figurent dans le contrat et
+              le décompte final.
+            </li>
+            <li>
+              <strong>Utiliser le test d'éligibilité :</strong> il permet
+              d'identifier les signaux potentiels dans votre dossier à partir
+              des informations disponibles, sans engagement.
+            </li>
+          </ol>
+
+          <div className="article-retenir">
+            <p className="article-retenir-label">À retenir</p>
+            <ul>
+              <li>
+                Le remboursement d'un prêt CHF ne met pas automatiquement fin
+                à toute possibilité d'analyse des conditions de souscription.
+              </li>
+              <li>
+                Les conditions du remboursement (date, taux de change, montant
+                soldé, décompte final) sont des éléments importants pour
+                apprécier l'impact du risque de change.
+              </li>
+              <li>
+                Des délais légaux s'appliquent selon les circonstances propres
+                à chaque dossier et ne peuvent être appréciés qu'au cas par cas.
+              </li>
+            </ul>
+          </div>
 
           {/* FAQ */}
           <section className="article-faq">
@@ -272,14 +400,16 @@ export default function ArticlePretDejaSolde() {
             <h2>Votre prêt CHF est soldé : mérite-t-il encore une vérification ?</h2>
             <p>
               Le test d'éligibilité prend en compte les prêts en cours et les
-              prêts déjà remboursés pour identifier les signaux à examiner.
+              prêts déjà remboursés pour identifier les signaux à examiner. La
+              simulation indicative donne un ordre de grandeur sur l'impact du
+              change.
             </p>
             <div className="article-cta-actions">
               <Link href="/eligibilite" className="juri-cta-primary-btn">
-                Tester votre éligibilité à un recours prêt CHF
+                Tester votre éligibilité prêt CHF
               </Link>
-              <Link href="/jurisprudence" className="juri-cta-secondary-btn">
-                Comprendre la jurisprudence des prêts CHF
+              <Link href="/simulation" className="juri-cta-secondary-btn">
+                Faire une simulation indicative
               </Link>
             </div>
           </div>

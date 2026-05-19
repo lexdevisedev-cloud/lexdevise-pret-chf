@@ -2977,6 +2977,44 @@ a {
   }
 }
 
+/* Article checklist */
+
+.article-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 24px;
+}
+
+.article-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+  padding: 10px 14px;
+  background: var(--soft);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary);
+}
+
+.article-checklist li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+@media (max-width: 640px) {
+  .article-checklist {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Article table */
 
 .article-table {
