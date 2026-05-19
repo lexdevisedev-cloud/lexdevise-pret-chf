@@ -298,8 +298,8 @@ export default function SimulationReportDownload({
     doc.setFont("helvetica", "normal");
     doc.setFontSize(7.5);
     doc.setTextColor(26, 92, 66);
-    doc.text("Tester les criteres d'eligibilite : pretschfinfo.fr/eligibilite", M + 4, y + 22.5);
-    doc.text("Comprendre la jurisprudence : pretschfinfo.fr/jurisprudence", M + 4, y + 27.5);
+    doc.text("Tester les criteres d'eligibilite : pret-chf-gouv.org/eligibilite", M + 4, y + 22.5);
+    doc.text("Comprendre la jurisprudence : pret-chf-gouv.org/jurisprudence", M + 4, y + 27.5);
     y += 36;
 
     // RGPD mention

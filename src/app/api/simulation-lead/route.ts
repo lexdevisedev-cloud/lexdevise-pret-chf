@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
   <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;border:1px solid #dce7e1;overflow:hidden;">
     <div style="background:linear-gradient(135deg,#123d2e,#1a5c42);padding:28px 32px;">
       <h1 style="color:#fff;font-size:22px;margin:0;">Nouvelle simulation prêt CHF</h1>
-      <p style="color:rgba(255,255,255,0.78);font-size:14px;margin:8px 0 0;">Via pretschfinfo.fr/simulation</p>
+      <p style="color:rgba(255,255,255,0.78);font-size:14px;margin:8px 0 0;">Via pret-chf-gouv.org/simulation</p>
     </div>
     <div style="padding:32px;">
       <table style="width:100%;border-collapse:collapse;font-size:15px;">
