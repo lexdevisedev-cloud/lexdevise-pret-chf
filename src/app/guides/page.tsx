@@ -66,6 +66,14 @@ const activeGuides = [
     slug: "pret-frontalier-suisse-chf",
     readingTime: "7 min",
   },
+  {
+    category: "Contentieux",
+    title: "C'est quoi un contentieux bancaire ?",
+    description:
+      "Définition simple d'un contentieux bancaire, ses causes fréquentes, ses conséquences possibles et le lien avec les prêts immobiliers en francs suisses.",
+    slug: "c-est-quoi-un-contentieux-bancaire",
+    readingTime: "6 min",
+  },
 ];
 
 const howToSteps = [
