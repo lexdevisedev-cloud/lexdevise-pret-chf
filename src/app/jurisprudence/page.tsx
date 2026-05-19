@@ -411,6 +411,51 @@ const faq = [
   },
 ];
 
+const sourcesRefs = [
+  {
+    ref: "Cour de cassation, 1re chambre civile, 18 septembre 2024, n° 22-17.746",
+    summary:
+      "Cette décision rappelle l'importance d'une information suffisamment claire et compréhensible sur le risque de change. L'enjeu est de vérifier si l'emprunteur a pu comprendre concrètement les conséquences économiques possibles du mécanisme contractuel.",
+    link: "https://www.courdecassation.fr",
+    linkLabel: "Cour de cassation",
+  },
+  {
+    ref: "Cour de cassation, 1re chambre civile, 9 juillet 2025, n° 24-19.647",
+    summary:
+      "Cette décision illustre l'importance d'apprécier le risque de change sur la durée du contrat, y compris lorsque l'emprunteur percevait des revenus en francs suisses au moment de la souscription.",
+    link: "https://www.courdecassation.fr",
+    linkLabel: "Cour de cassation",
+  },
+  {
+    ref: "Cour de cassation, 1re chambre civile, 9 juillet 2025, n° 24-18.018",
+    summary:
+      "Cette décision rappelle également les limites de l'analyse : une documentation suffisamment claire, concrète et compréhensible peut conduire à écarter le caractère abusif d'une clause.",
+    link: "https://www.courdecassation.fr",
+    linkLabel: "Cour de cassation",
+  },
+  {
+    ref: "Cour de justice de l'Union européenne, 10 juin 2021",
+    summary:
+      "La Cour de justice de l'Union européenne a précisé que l'exigence de transparence ne se limite pas à la compréhension grammaticale d'une clause. L'emprunteur doit pouvoir comprendre le fonctionnement économique du mécanisme et les conséquences financières potentiellement significatives.",
+    link: "https://curia.europa.eu",
+    linkLabel: "Curia / CJUE",
+  },
+  {
+    ref: "Directive 93/13/CEE du 5 avril 1993",
+    summary:
+      "Cette directive encadre la protection des consommateurs contre les clauses abusives dans les contrats conclus avec des professionnels. Elle sert de base à l'analyse des clauses qui ne seraient pas rédigées de manière claire et compréhensible.",
+    link: "https://eur-lex.europa.eu",
+    linkLabel: "EUR-Lex",
+  },
+  {
+    ref: "Code de la consommation",
+    summary:
+      "Les règles relatives aux clauses abusives, à l'information du consommateur et au crédit immobilier peuvent être mobilisées selon la période de souscription, la nature du contrat et les textes applicables au dossier.",
+    link: "https://www.legifrance.gouv.fr",
+    linkLabel: "Légifrance",
+  },
+];
+
 export default function JurisprudencePage() {
   return (
     <main className="juri-page">
@@ -1067,7 +1112,55 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 21. CTA FINAL */}
+      {/* 21. SOURCES JURIDIQUES ET RÉFÉRENCES */}
+      <section className="home-section white-section">
+        <div className="section-inner juri-section-inner">
+          <div className="juri-section-header">
+            <p className="eyebrow">Transparence éditoriale</p>
+            <h2>Sources juridiques et références</h2>
+            <p className="juri-section-intro">
+              Cette page s&apos;appuie sur une lecture pédagogique de décisions et
+              textes utiles à la compréhension des prêts immobiliers en francs
+              suisses, du risque de change et de l&apos;exigence de transparence.
+              Les références ci-dessous sont présentées à titre informatif et
+              doivent toujours être appréciées au regard du contrat et des
+              documents propres à chaque dossier.
+            </p>
+          </div>
+
+          <div className="juri-obligations-grid">
+            {sourcesRefs.map((src) => (
+              <article key={src.ref} className="juri-revirement-card">
+                <p className="juri-timeline-period" style={{ marginBottom: "10px", fontSize: "0.82rem" }}>
+                  {src.ref}
+                </p>
+                <p style={{ fontSize: "0.95rem", lineHeight: 1.6, margin: 0 }}>{src.summary}</p>
+                <p style={{ marginTop: "12px", marginBottom: 0 }}>
+                  <a
+                    href={src.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "var(--primary)", fontSize: "0.85rem", fontWeight: 600, textDecoration: "underline" }}
+                  >
+                    {src.linkLabel} ↗
+                  </a>
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="juri-prudence-box" style={{ marginTop: "36px" }}>
+            <strong>À noter :</strong> une décision de jurisprudence ne permet pas, à elle seule, de
+            conclure à l&apos;existence d&apos;un recours. Chaque situation dépend des clauses, des documents
+            remis, des dates et de la situation personnelle de l&apos;emprunteur.{" "}
+            <Link href="/sources-methodologie" style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}>
+              Comprendre notre méthodologie éditoriale →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 22. CTA FINAL */}
       <section className="home-section dark-green-section">
         <div className="section-inner juri-cta-inner">
           <p className="eyebrow">Première vérification</p>
