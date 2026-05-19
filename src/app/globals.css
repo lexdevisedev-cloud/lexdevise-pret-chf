@@ -6264,6 +6264,47 @@ a {
 }
 
 /* ─────────────────────────────────────────
+   JURISPRUDENCE — NOUVEAUX BLOCS
+───────────────────────────────────────── */
+
+.juri-long-text {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.juri-long-text p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.juri-long-text a {
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border-color 140ms ease;
+}
+
+.juri-long-text a:hover {
+  border-bottom-color: var(--primary);
+}
+
+.juri-checklist-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .juri-checklist-two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ─────────────────────────────────────────
    SIMULATION — SEO INTRO
 ───────────────────────────────────────── */
 

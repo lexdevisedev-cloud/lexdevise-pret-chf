@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// TODO: Définir NEXT_PUBLIC_SITE_URL dans .env.local (ex: https://pretschfinfo.fr)
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://VOTRE-DOMAINE.fr";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Jurisprudence prêt CHF : recours, clauses abusives et risque de change",
+  title:
+    "Jurisprudence prêt CHF : recours, risque de change et clauses abusives | Prêts CHF Info",
   description:
-    "Comprenez la jurisprudence récente sur les prêts immobiliers en francs suisses : risque de change, clauses abusives, frontaliers, Cour de cassation 2025 et documents à vérifier.",
+    "Comprendre les évolutions de jurisprudence sur les prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les recours possibles pour les emprunteurs frontaliers ou résidents en France.",
   alternates: {
     canonical: `${SITE_URL}/jurisprudence`,
   },
   openGraph: {
-    title: "Jurisprudence prêt CHF : comprendre vos recours",
+    title:
+      "Jurisprudence prêt CHF : recours, risque de change et clauses abusives | Prêts CHF Info",
     description:
-      "Guide pédagogique sur les décisions récentes concernant les prêts immobiliers en francs suisses, le risque de change et l'information bancaire.",
+      "Comprendre les évolutions de jurisprudence sur les prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les recours possibles pour les emprunteurs frontaliers ou résidents en France.",
     url: `${SITE_URL}/jurisprudence`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
@@ -22,11 +23,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jurisprudence prêt CHF : comprendre vos recours",
+    title:
+      "Jurisprudence prêt CHF : recours, risque de change et clauses abusives | Prêts CHF Info",
     description:
-      "Guide pédagogique sur les décisions récentes concernant les prêts immobiliers en francs suisses, le risque de change et l'information bancaire.",
+      "Comprendre les évolutions de jurisprudence sur les prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les recours possibles pour les emprunteurs frontaliers ou résidents en France.",
   },
 };
+
+/* ── Données existantes ────────────────────────────────── */
 
 const evolutionsCards = [
   {
@@ -282,10 +286,84 @@ const etapesAction = [
   },
 ];
 
+/* ── Nouvelles données ─────────────────────────────────── */
+
+const decisionsClés = [
+  {
+    ref: "Cass. 1re civ., 18 septembre 2024, n° 22-17.746",
+    title: "La preuve d'une information concrète",
+    text: "La banque doit permettre à l'emprunteur de comprendre réellement le risque de change, pas seulement d'en avoir une connaissance abstraite. Une information trop générale peut être insuffisante si elle ne permet pas d'évaluer les conséquences économiques possibles.",
+  },
+  {
+    ref: "Cass. 1re civ., 9 juillet 2025, n° 24-19.647",
+    title: "Le risque apprécié sur toute la durée",
+    text: "Même lorsqu'un emprunteur perçoit des revenus en francs suisses, le risque de change peut exister sur toute la durée du prêt. L'analyse ne se limite pas à la situation au jour de la signature.",
+  },
+  {
+    ref: "Cass. 1re civ., 9 juillet 2025, n° 24-18.018",
+    title: "Une transparence démontrée peut suffire",
+    text: "Lorsque la banque démontre qu'une information claire, concrète et compréhensible a été remise à l'emprunteur, les demandes peuvent être rejetées. Le revirement n'implique pas que toutes les clauses soient automatiquement abusives.",
+  },
+  {
+    ref: "CJUE, 10 juin 2021",
+    title: "La transparence au-delà de la grammaire",
+    text: "L'exigence de transparence ne se limite pas à la lisibilité formelle des clauses. L'emprunteur doit pouvoir comprendre le fonctionnement économique concret du mécanisme et les conséquences potentiellement significatives pendant toute la durée du contrat.",
+  },
+];
+
+const juriNeSignifiePas = [
+  {
+    title: "Elle ne garantit pas une annulation automatique",
+    text: "Chaque dossier dépend des clauses du contrat, des documents remis à l'emprunteur, de sa situation personnelle et du calendrier d'action applicable.",
+  },
+  {
+    title: "Elle ne remplace pas l'analyse du contrat",
+    text: "Il faut relire l'offre de prêt, les conditions générales, les notices d'information, les simulations, les tableaux d'amortissement et les échanges avec la banque.",
+  },
+  {
+    title: "Elle ne se limite pas à la mensualité",
+    text: "Le risque peut aussi porter sur le capital restant dû, la revente du bien, le remboursement anticipé ou une perte de revenus en francs suisses.",
+  },
+  {
+    title: "Elle impose une analyse de la transparence",
+    text: "Le point central est souvent de savoir si l'emprunteur a pu comprendre, avant de signer, le fonctionnement concret du risque de change et ses conséquences économiques possibles.",
+  },
+];
+
+const checklistClauses = [
+  "Clause de devise",
+  "Clause de remboursement",
+  "Clause de conversion",
+  "Clause de risque de change",
+  "Clause de remboursement anticipé",
+  "Clause liée au capital restant dû",
+  "Clause d'adossement éventuel",
+  "Clauses liées aux avenants ou renégociations",
+];
+
+const checklistDocuments = [
+  "Offre de prêt",
+  "Conditions particulières",
+  "Conditions générales",
+  "Notice d'information",
+  "Simulations chiffrées",
+  "Tableaux d'amortissement",
+  "Avenants",
+  "Courriers et emails",
+  "Relevés de prêt",
+  "Documents de revente ou de remboursement anticipé",
+];
+
+/* ── FAQ (existante + nouvelles questions) ─────────────── */
+
 const faq = [
   {
     q: "Qu'est-ce que la jurisprudence prêt CHF ?",
     a: "La jurisprudence prêt CHF désigne les décisions rendues à propos des crédits immobiliers libellés, remboursables ou indexés sur le franc suisse, notamment lorsque le risque de change et l'information de l'emprunteur sont discutés.",
+  },
+  {
+    q: "La jurisprudence permet-elle d'annuler tous les prêts CHF ?",
+    a: "Non. Les décisions récentes renforcent l'exigence de transparence, mais chaque dossier dépend du contrat, des documents remis, de la situation de l'emprunteur et de la prescription applicable.",
   },
   {
     q: "Un frontalier payé en CHF peut-il contester son prêt ?",
@@ -298,6 +376,10 @@ const faq = [
   {
     q: "Pourquoi l'arrêt du 18 septembre 2024 est-il important ?",
     a: "Il souligne l'importance de la preuve de l'information. La question n'est pas seulement la présence d'une clause, mais la capacité de l'emprunteur à comprendre ses conséquences économiques.",
+  },
+  {
+    q: "Quelle différence entre clause abusive et information insuffisante ?",
+    a: "Une clause peut être examinée sous l'angle de sa clarté et de sa compréhension par l'emprunteur. Une information insuffisante peut empêcher de comprendre le mécanisme économique réel, ce qui peut conduire à contester certaines stipulations du contrat.",
   },
   {
     q: "Une clause de risque de change peut-elle être abusive ?",
@@ -316,8 +398,12 @@ const faq = [
     a: "Les documents utiles sont notamment l'offre de prêt, les conditions générales, les conditions particulières, les notices, les simulations, les avenants et les échanges avec la banque.",
   },
   {
-    q: "Un prêt CHF déjà remboursé peut-il être analysé ?",
-    a: "Oui, dans certains cas. Il faut examiner les dates, les conditions de remboursement, les documents disponibles et les délais applicables.",
+    q: "Une décision de jurisprudence favorable suffit-elle pour agir ?",
+    a: "Non. Une décision donne un cadre d'analyse, mais il faut vérifier si les faits, les documents et les clauses du dossier sont comparables. L'issue dépend de l'appréciation des éléments propres à chaque contrat.",
+  },
+  {
+    q: "Un prêt CHF déjà remboursé peut-il encore poser question ?",
+    a: "Oui, notamment en cas de remboursement anticipé, de revente ou de difficulté à comprendre le coût réel du crédit. La question dépend toutefois des délais applicables et des pièces disponibles.",
   },
   {
     q: "Le résultat d'un recours prêt CHF est-il garanti ?",
@@ -376,11 +462,14 @@ export default function JurisprudencePage() {
             <span className="juri-sommaire-title">Sur cette page</span>
             <ol className="juri-sommaire-list">
               <li><a href="#evolutions">Évolutions récentes</a></li>
+              <li><a href="#decisions-cles">Décisions clés</a></li>
               <li><a href="#frontaliers">Frontaliers</a></li>
               <li><a href="#risque-change">Risque de change</a></li>
-              <li><a href="#decisions">Décisions 2024–2025</a></li>
+              <li><a href="#decisions">Chronologie</a></li>
               <li><a href="#clauses">Clauses abusives</a></li>
+              <li><a href="#juri-ne-signifie-pas">Ce que ça ne signifie pas</a></li>
               <li><a href="#documents">Documents utiles</a></li>
+              <li><a href="#checklist">Checklist</a></li>
               <li><a href="#faq">FAQ</a></li>
             </ol>
           </div>
@@ -407,7 +496,38 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 4. FRONTALIERS */}
+      {/* 4. DÉCISIONS CLÉS ← NOUVELLE SECTION */}
+      <section id="decisions-cles" className="home-section juri-soft-section">
+        <div className="section-inner juri-section-inner">
+          <div className="juri-section-header">
+            <p className="eyebrow">Références jurisprudentielles</p>
+            <h2>Les décisions clés à connaître sur les prêts CHF</h2>
+            <p className="juri-section-intro">
+              Quatre décisions structurent aujourd&apos;hui l&apos;analyse des prêts immobiliers en francs suisses. Ces décisions doivent être appréciées selon les clauses du contrat et les pièces remises à l&apos;emprunteur.
+            </p>
+          </div>
+          <div className="juri-four-grid">
+            {decisionsClés.map((d) => (
+              <article key={d.ref} className="juri-revirement-card">
+                <p className="juri-timeline-period" style={{ marginBottom: "8px" }}>{d.ref}</p>
+                <h3>{d.title}</h3>
+                <p>{d.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="juri-prudence-box" style={{ marginTop: "32px" }}>
+            Ces décisions doivent être appréciées selon les clauses du contrat et les pièces remises à l&apos;emprunteur. Pour approfondir, consultez les{" "}
+            <Link
+              href="/blog/cour-cassation-9-juillet-2025-pret-chf"
+              style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+            >
+              arrêts du 9 juillet 2025 sur les prêts CHF
+            </Link>.
+          </div>
+        </div>
+      </section>
+
+      {/* 5. FRONTALIERS */}
       <section id="frontaliers" className="home-section dark-green-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header" style={{ maxWidth: "820px" }}>
@@ -430,7 +550,7 @@ export default function JurisprudencePage() {
               </div>
               <div className="juri-section-cta">
                 <Link href="/eligibilite" className="juri-cta-primary-btn">
-                  Tester mon éligibilité en 3 questions
+                  Tester l&apos;éligibilité d&apos;un recours prêt CHF
                 </Link>
               </div>
             </div>
@@ -450,7 +570,44 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 5. RISQUE DE CHANGE */}
+      {/* 6. FRONTALIERS — ÉVOLUTION ÉTENDUE ← NOUVELLE SECTION */}
+      <section id="frontaliers-evolution" className="home-section white-section">
+        <div className="section-inner juri-section-inner">
+          <div className="juri-section-header">
+            <p className="eyebrow">Prêt CHF frontalier</p>
+            <h2>Prêt CHF frontalier : pourquoi la jurisprudence a évolué</h2>
+          </div>
+          <div className="juri-long-text">
+            <p>
+              Pendant longtemps, l&apos;argument avancé par certaines banques consistait à faire valoir qu&apos;un emprunteur travaillant en Suisse et percevant des revenus en francs suisses n&apos;était pas réellement exposé au risque de change. Le raisonnement semblait logique : si les revenus et les remboursements sont dans la même devise, la volatilité EUR/CHF affecte moins directement la capacité de remboursement mensuelle.
+            </p>
+            <p>
+              Les décisions récentes invitent à dépasser cette vision limitée. L&apos;analyse du risque doit s&apos;apprécier sur toute la durée du contrat, pas uniquement au jour de la signature. Or, la situation d&apos;un emprunteur frontalier peut évoluer significativement : perte d&apos;emploi en Suisse, départ à la retraite, passage à un emploi en France, préretraite ou arrêt maladie. Dès lors que les revenus cessent d&apos;être en CHF, le rapport entre la dette liée à cette devise et les ressources disponibles peut se dégrader.
+            </p>
+            <p>
+              Par ailleurs, le bien immobilier financé est souvent situé en France et valorisé en euros. En cas de revente ou de remboursement anticipé, l&apos;emprunteur peut se trouver dans une situation où le produit de la vente, exprimé en euros, ne suffit pas à solder une dette dont le montant en CHF s&apos;est apprécié. Ce décalage entre la valeur du bien en euros et la contrevaleur de la dette en CHF est au cœur de nombreux dossiers.
+            </p>
+            <p>
+              Pour les prêts in fine, le risque est concentré à l&apos;échéance : la totalité du capital doit être remboursée, et si le CHF s&apos;est apprécié par rapport à l&apos;euro depuis la souscription, la somme à rembourser exprimée en euros peut avoir sensiblement augmenté.
+            </p>
+            <p>
+              Cela ne signifie pas que tous les dossiers de frontaliers sont automatiquement fondés. Si la banque démontre avoir remis une information claire, concrète et compréhensible sur ces différents scénarios — notamment via des simulations chiffrées, une notice explicite sur les risques liés à l&apos;évolution du taux de change et une projection sur la durée du prêt — les demandes peuvent être rejetées. L&apos;enjeu est donc de vérifier la qualité de l&apos;information remise avant la signature.
+            </p>
+            <p>
+              Pour approfondir ce sujet, consultez notre article dédié au{" "}
+              <Link
+                href="/blog/pret-chf-frontalier"
+                style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+              >
+                prêt CHF frontalier
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. RISQUE DE CHANGE */}
       <section id="risque-change" className="home-section juri-soft-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -469,14 +626,24 @@ export default function JurisprudencePage() {
           </div>
           <div className="juri-prudence-box" style={{ marginTop: "32px" }}>
             Ces exemples sont pédagogiques. Les effets réels dépendent du contrat, des montants, des dates et des documents disponibles.{" "}
-            <Link href="/simulation" style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}>
-              Faire une simulation indicative
-            </Link>
+            <Link
+              href="/blog/risque-change-pret-chf"
+              style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+            >
+              En savoir plus sur le risque de change d&apos;un prêt CHF
+            </Link>{" "}
+            ou{" "}
+            <Link
+              href="/simulation"
+              style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+            >
+              estimer un impact financier indicatif
+            </Link>.
           </div>
         </div>
       </section>
 
-      {/* 6. CHRONOLOGIE */}
+      {/* 8. CHRONOLOGIE */}
       <section id="decisions" className="home-section white-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -502,7 +669,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 7. COUR DE CASSATION 9 JUILLET 2025 */}
+      {/* 9. COUR DE CASSATION 9 JUILLET 2025 */}
       <section className="home-section juri-soft-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -518,7 +685,7 @@ export default function JurisprudencePage() {
               Cass. 1re civ., 9 juillet 2025, n° 24-19.647 — Cass. 1re civ., 9 juillet 2025, n° 24-18.018.
               Pour approfondir, consultez{" "}
               <Link href="/blog/cour-cassation-9-juillet-2025-pret-chf" style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}>
-                le guide sur la Cour de cassation du 9 juillet 2025
+                le guide sur les arrêts du 9 juillet 2025 sur les prêts CHF
               </Link>.
             </p>
           </div>
@@ -533,7 +700,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 8. ARRÊT 18 SEPTEMBRE 2024 */}
+      {/* 10. ARRÊT 18 SEPTEMBRE 2024 */}
       <section className="home-section white-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -563,7 +730,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 9. CLAUSES ABUSIVES */}
+      {/* 11. CLAUSES ABUSIVES */}
       <section id="clauses" className="home-section juri-soft-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-split-layout">
@@ -617,7 +784,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 10. CE QUE LA BANQUE DEVAIT EXPLIQUER */}
+      {/* 12. CE QUE LA BANQUE DEVAIT EXPLIQUER */}
       <section className="home-section white-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -638,13 +805,50 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 11. DOCUMENTS */}
-      <section id="documents" className="home-section juri-soft-section">
+      {/* 13. CE QUE LA JURISPRUDENCE NE SIGNIFIE PAS ← NOUVELLE SECTION */}
+      <section id="juri-ne-signifie-pas" className="home-section juri-soft-section">
+        <div className="section-inner juri-section-inner">
+          <div className="juri-section-header">
+            <p className="eyebrow">Limites à comprendre</p>
+            <h2>Ce que la jurisprudence prêt CHF ne signifie pas</h2>
+            <p className="juri-section-intro">
+              Le renforcement des exigences jurisprudentielles ne doit pas être interprété comme une garantie automatique. Comprendre ce que les décisions récentes ne disent pas est aussi important que de saisir ce qu&apos;elles établissent.
+            </p>
+          </div>
+          <div className="juri-four-grid">
+            {juriNeSignifiePas.map((block) => (
+              <article key={block.title} className="juri-revirement-card">
+                <h3>{block.title}</h3>
+                <p>{block.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="juri-prudence-box" style={{ marginTop: "32px" }}>
+            Pour{" "}
+            <Link
+              href="/eligibilite"
+              style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+            >
+              tester l&apos;éligibilité d&apos;un recours prêt CHF
+            </Link>
+            , le questionnaire permet d&apos;identifier les principaux signaux présents dans votre dossier.
+          </div>
+        </div>
+      </section>
+
+      {/* 14. DOCUMENTS */}
+      <section id="documents" className="home-section white-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
             <h2>Documents utiles pour analyser la jurisprudence applicable à un prêt CHF</h2>
             <p className="juri-section-intro">
-              L&apos;analyse de la jurisprudence ne peut pas être déconnectée des pièces du dossier. Les documents remis avant la signature sont essentiels pour vérifier la qualité de l&apos;information transmise à l&apos;emprunteur.
+              L&apos;analyse de la jurisprudence ne peut pas être déconnectée des pièces du dossier. Les documents remis avant la signature sont essentiels pour vérifier la qualité de l&apos;information transmise à l&apos;emprunteur. Consultez notre guide sur les{" "}
+              <Link
+                href="/blog/documents-pret-chf"
+                style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+              >
+                documents à vérifier pour un prêt CHF
+              </Link>.
             </p>
           </div>
           <div className="juri-doc-grid">
@@ -663,7 +867,53 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 12. TABLEAU */}
+      {/* 15. CHECKLIST CLAUSES ET DOCUMENTS ← NOUVELLE SECTION */}
+      <section id="checklist" className="home-section juri-soft-section">
+        <div className="section-inner juri-section-inner">
+          <div className="juri-section-header">
+            <p className="eyebrow">À relire</p>
+            <h2>Checklist : clauses et documents à relire dans un prêt CHF</h2>
+            <p className="juri-section-intro">
+              La présence d&apos;une clause sur le risque de change ne suffit pas toujours : l&apos;enjeu est de savoir si l&apos;information permettait réellement de comprendre l&apos;impact économique possible.
+            </p>
+          </div>
+          <div className="juri-checklist-two-col">
+            <div>
+              <p className="juri-limits-title">Clauses à vérifier</p>
+              <div className="juri-checklist-grid">
+                {checklistClauses.map((item) => (
+                  <div key={item} className="juri-checklist-item">
+                    <span className="juri-checklist-icon" aria-hidden="true">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="juri-limits-title">Documents à vérifier</p>
+              <div className="juri-checklist-grid">
+                {checklistDocuments.map((item) => (
+                  <div key={item} className="juri-checklist-item">
+                    <span className="juri-checklist-icon" aria-hidden="true">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="juri-prudence-box" style={{ marginTop: "32px" }}>
+            Pour une présentation complète, consultez le guide sur les{" "}
+            <Link
+              href="/blog/documents-pret-chf"
+              style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}
+            >
+              documents à vérifier pour un prêt CHF
+            </Link>.
+          </div>
+        </div>
+      </section>
+
+      {/* 16. TABLEAU */}
       <section className="home-section white-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -707,7 +957,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 13. EFFETS POSSIBLES */}
+      {/* 17. EFFETS POSSIBLES */}
       <section className="home-section juri-soft-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -730,7 +980,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 14. LIMITES */}
+      {/* 18. LIMITES */}
       <section className="home-section white-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -756,7 +1006,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 15. QUE FAIRE */}
+      {/* 19. QUE FAIRE */}
       <section className="home-section dark-green-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header" style={{ maxWidth: "820px" }}>
@@ -786,7 +1036,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 16. FAQ */}
+      {/* 20. FAQ */}
       <section id="faq" className="home-section juri-soft-section">
         <div className="section-inner juri-section-inner">
           <div className="juri-section-header">
@@ -810,7 +1060,7 @@ export default function JurisprudencePage() {
         </div>
       </section>
 
-      {/* 17. CTA FINAL */}
+      {/* 21. CTA FINAL */}
       <section className="home-section dark-green-section">
         <div className="section-inner juri-cta-inner">
           <p className="eyebrow">Première vérification</p>
@@ -841,7 +1091,7 @@ export default function JurisprudencePage() {
               {
                 "@type": "WebPage",
                 "@id": `${SITE_URL}/jurisprudence`,
-                name: "Jurisprudence prêt CHF : comprendre vos recours face au risque de change",
+                name: "Jurisprudence prêt CHF : recours, risque de change et clauses abusives",
                 description:
                   "Guide pédagogique sur la jurisprudence des prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les documents à vérifier.",
                 url: `${SITE_URL}/jurisprudence`,
@@ -851,7 +1101,12 @@ export default function JurisprudencePage() {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Accueil", item: SITE_URL },
-                  { "@type": "ListItem", position: 2, name: "Jurisprudence", item: `${SITE_URL}/jurisprudence` },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Jurisprudence",
+                    item: `${SITE_URL}/jurisprudence`,
+                  },
                 ],
               },
               {
