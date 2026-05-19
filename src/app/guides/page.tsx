@@ -82,6 +82,14 @@ const activeGuides = [
     slug: "consequences-contentieux-bancaire",
     readingTime: "7 min",
   },
+  {
+    category: "Contentieux",
+    title: "Banque et contentieux prêt CHF",
+    description:
+      "Les points de vigilance lorsqu'un désaccord avec une banque concerne un prêt immobilier en francs suisses : information, clauses, risque de change et documents à vérifier.",
+    slug: "banque-contentieux-pret-chf",
+    readingTime: "7 min",
+  },
 ];
 
 const howToSteps = [
