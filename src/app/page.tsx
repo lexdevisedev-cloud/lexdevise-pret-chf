@@ -812,7 +812,113 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 12. FAQ ───────────────────────────────────────────────────── */}
+        {/* ── 12. GUIDES PRATIQUES ──────────────────────────────────────── */}
+        <section className="home-section white-section">
+          <div className="section-inner home-section-pad">
+            <div className="home-section-header">
+              <p className="eyebrow">Guides pratiques</p>
+              <h2>Guides pratiques sur les prêts CHF</h2>
+              <p>
+                Approfondissez les situations fréquentes liées aux prêts
+                immobiliers en francs suisses : frontaliers, risque de change,
+                contentieux bancaire, banque prêteuse, jurisprudence et
+                documents à vérifier.
+              </p>
+            </div>
+            <div className="blog-grid">
+              <Link href="/guides/pret-en-devise-chf-credit-mutuel" className="blog-card">
+                <span className="blog-card-cat">Banques prêteuses</span>
+                <h3 className="blog-card-title">Prêt en devise CHF Crédit Mutuel</h3>
+                <p className="blog-card-desc">
+                  Les points à vérifier lorsqu&apos;un prêt immobilier en devise
+                  CHF a été souscrit auprès du Crédit Mutuel : clauses,
+                  documents et risque de change.
+                </p>
+                <div className="blog-card-footer">
+                  <span className="blog-card-time">8 min de lecture</span>
+                  <span className="blog-card-link">Lire le guide →</span>
+                </div>
+              </Link>
+
+              <Link href="/guides/pret-toxique-franc-suisse" className="blog-card">
+                <span className="blog-card-cat">Situations particulières</span>
+                <h3 className="blog-card-title">Prêt toxique en francs suisses</h3>
+                <p className="blog-card-desc">
+                  Comprendre pourquoi certains prêts immobiliers en francs
+                  suisses sont perçus comme toxiques : risque de change,
+                  capital restant dû et clauses.
+                </p>
+                <div className="blog-card-footer">
+                  <span className="blog-card-time">8 min de lecture</span>
+                  <span className="blog-card-link">Lire le guide →</span>
+                </div>
+              </Link>
+
+              <Link href="/guides/contentieux-bancaire-pret-chf" className="blog-card">
+                <span className="blog-card-cat">Contentieux</span>
+                <h3 className="blog-card-title">Contentieux bancaire prêt CHF</h3>
+                <p className="blog-card-desc">
+                  Les principales causes de litige liées aux prêts immobiliers
+                  en francs suisses : risque de change, information
+                  précontractuelle, clauses et documents.
+                </p>
+                <div className="blog-card-footer">
+                  <span className="blog-card-time">8 min de lecture</span>
+                  <span className="blog-card-link">Lire le guide →</span>
+                </div>
+              </Link>
+
+              <Link href="/guides/pret-frontalier-suisse-chf" className="blog-card">
+                <span className="blog-card-cat">Frontaliers</span>
+                <h3 className="blog-card-title">Prêt frontalier Suisse et CHF</h3>
+                <p className="blog-card-desc">
+                  Les points à vérifier lorsqu&apos;un frontalier suisse a souscrit
+                  un prêt immobilier lié au franc suisse : risque de change,
+                  clauses et documents.
+                </p>
+                <div className="blog-card-footer">
+                  <span className="blog-card-time">7 min de lecture</span>
+                  <span className="blog-card-link">Lire le guide →</span>
+                </div>
+              </Link>
+
+              <Link href="/guides/dernieres-jurisprudences-franc-suisse-particuliers" className="blog-card">
+                <span className="blog-card-cat">Jurisprudence</span>
+                <h3 className="blog-card-title">Dernières jurisprudences franc suisse pour particuliers</h3>
+                <p className="blog-card-desc">
+                  Synthèse des décisions récentes — Cour de cassation 2024 et
+                  2025, CJUE — concernant les particuliers ayant souscrit un
+                  prêt CHF en France.
+                </p>
+                <div className="blog-card-footer">
+                  <span className="blog-card-time">7 min de lecture</span>
+                  <span className="blog-card-link">Lire le guide →</span>
+                </div>
+              </Link>
+
+              <Link href="/guides/c-est-quoi-un-contentieux-bancaire" className="blog-card">
+                <span className="blog-card-cat">Contentieux</span>
+                <h3 className="blog-card-title">C&apos;est quoi un contentieux bancaire ?</h3>
+                <p className="blog-card-desc">
+                  Définition simple d&apos;un contentieux bancaire, ses causes
+                  fréquentes, ses conséquences possibles et le lien avec les
+                  prêts immobiliers en francs suisses.
+                </p>
+                <div className="blog-card-footer">
+                  <span className="blog-card-time">6 min de lecture</span>
+                  <span className="blog-card-link">Lire le guide →</span>
+                </div>
+              </Link>
+            </div>
+            <div className="home-section-cta">
+              <Link href="/guides" className="secondary-btn">
+                Voir tous les guides
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 13. FAQ ───────────────────────────────────────────────────── */}
         <section className="home-section white-section">
           <div className="section-inner home-section-pad">
             <div className="home-section-header">
