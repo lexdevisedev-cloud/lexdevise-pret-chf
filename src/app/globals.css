@@ -6264,6 +6264,54 @@ a {
 }
 
 /* ─────────────────────────────────────────
+   SIMULATION — SEO INTRO
+───────────────────────────────────────── */
+
+.sim-seo-intro {
+  border-bottom: 1px solid var(--border);
+}
+
+.sim-seo-intro-inner {
+  padding-top: 64px;
+  padding-bottom: 56px;
+  max-width: 860px;
+}
+
+.sim-seo-h2 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.sim-seo-links {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.sim-seo-links a {
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border-color 140ms ease;
+}
+
+.sim-seo-links a:hover {
+  border-bottom-color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .sim-seo-h2 {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* ─────────────────────────────────────────
    FOOTER
 ───────────────────────────────────────── */
 
