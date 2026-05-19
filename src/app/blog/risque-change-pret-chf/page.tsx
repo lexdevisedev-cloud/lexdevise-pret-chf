@@ -1,36 +1,50 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://VOTRE-DOMAINE.fr";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF",
+  title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF | Prêts CHF Info",
   description:
-    "Comprenez comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses et pourquoi une simulation indicative peut être utile.",
+    "Comprendre comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses, le capital restant dû et les situations de revente ou remboursement anticipé.",
   alternates: { canonical: `${SITE_URL}/blog/risque-change-pret-chf` },
   openGraph: {
-    title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF",
+    title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF | Prêts CHF Info",
     description:
-      "Comprenez comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses.",
+      "Comprendre comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses, le capital restant dû et les situations de revente.",
     url: `${SITE_URL}/blog/risque-change-pret-chf`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF | Prêts CHF Info",
+    description:
+      "Comprendre comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses.",
+  },
 };
 
 const faq = [
   {
-    q: "Le risque de change d'un prêt CHF concerne-t-il seulement les mensualités ?",
-    a: "Non. Le risque porte principalement sur le capital restant dû. Même si les mensualités restent stables, le montant à rembourser exprimé en euros peut augmenter si le franc suisse s'apprécie. C'est souvent lors d'une revente ou d'un remboursement anticipé que l'impact devient visible.",
+    q: "Le taux EUR/CHF suffit-il à calculer un préjudice ?",
+    a: "Non. Le taux de change donne un indicateur de l'évolution de la contrevaleur, mais le calcul d'un préjudice réel dépend du type de prêt, du capital restant dû, des remboursements effectués, des clauses contractuelles et de la situation de l'emprunteur.",
   },
   {
-    q: "Peut-on estimer l'impact du risque de change avant de contacter un professionnel ?",
-    a: "Une simulation indicative permet d'obtenir un ordre de grandeur. Elle ne remplace pas une analyse juridique ou financière, mais peut aider à visualiser l'impact d'une variation EUR/CHF sur le capital d'un prêt.",
+    q: "Le simulateur donne-t-il un montant définitif ?",
+    a: "Non. Le simulateur fournit une estimation indicative sous forme de fourchette. Il ne constitue pas une évaluation juridique ou financière définitive. Les résultats doivent être complétés par l'analyse du contrat et des documents bancaires.",
   },
   {
-    q: "La banque devait-elle expliquer ce risque de façon chiffrée ?",
-    a: "Selon les exigences progressivement affirmées par la jurisprudence, une simple mention abstraite du risque de change peut ne pas suffire. Des simulations illustrant plusieurs scénarios de variation EUR/CHF étaient attendues pour que l'emprunteur puisse comprendre concrètement son engagement.",
+    q: "Pourquoi le capital restant dû peut-il sembler élevé ?",
+    a: "Dans un prêt CHF, le capital restant dû exprimé en euros dépend du taux EUR/CHF au moment du calcul. Si le franc suisse s'est apprécié depuis la souscription, la contrevaleur en euros peut être supérieure au montant initialement emprunté converti au taux d'origine.",
+  },
+  {
+    q: "Un prêt en CHF avec revenus en CHF comporte-t-il un risque ?",
+    a: "Oui, potentiellement. Les revenus en CHF couvrent une partie du risque sur les mensualités courantes, mais le risque reste présent lors d'une revente (bien valorisé en euros), d'un remboursement anticipé ou d'une évolution de la situation professionnelle.",
+  },
+  {
+    q: "Quels documents sont nécessaires pour analyser un prêt CHF ?",
+    a: "Les documents essentiels sont l'offre de prêt originale, les conditions particulières et générales, les notices d'information sur le risque de change, les simulations remises par la banque, les tableaux d'amortissement, les avenants éventuels et les échanges avec l'établissement.",
   },
 ];
 
@@ -42,10 +56,10 @@ const jsonLd = {
       "@id": `${SITE_URL}/blog/risque-change-pret-chf`,
       headline: "Risque de change prêt CHF : comprendre l'impact EUR/CHF",
       description:
-        "Un guide simple pour comprendre comment l'évolution du franc suisse peut modifier la contrevaleur d'un capital ou d'un remboursement.",
+        "Comprendre comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses, le capital restant dû et les situations de revente ou remboursement anticipé.",
       url: `${SITE_URL}/blog/risque-change-pret-chf`,
       datePublished: "2025-05-13",
-      dateModified: "2025-05-13",
+      dateModified: "2025-05-19",
       inLanguage: "fr-FR",
       author: { "@type": "Organization", name: "Prêts CHF Info" },
       publisher: { "@type": "Organization", name: "Prêts CHF Info" },
@@ -56,7 +70,12 @@ const jsonLd = {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` },
         { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
-        { "@type": "ListItem", position: 3, name: "Risque de change prêt CHF", item: `${SITE_URL}/blog/risque-change-pret-chf` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Risque de change prêt CHF",
+          item: `${SITE_URL}/blog/risque-change-pret-chf`,
+        },
       ],
     },
     {
@@ -90,19 +109,16 @@ export default function ArticleRisqueChange() {
               <span>Risque de change prêt CHF</span>
             </nav>
             <span className="article-cat-badge">Risque de change</span>
-            <h1>Risque de change prêt CHF : comprendre l'impact EUR/CHF</h1>
+            <h1>Risque de change prêt CHF : comprendre l&apos;impact EUR/CHF</h1>
             <p className="article-hero-intro">
-              Le risque de change d'un prêt en francs suisses porte
-              principalement sur le capital restant dû : lorsque le franc suisse
-              s'apprécie face à l'euro, la contrevaleur en euros de ce capital
-              augmente mécaniquement. Ce guide explique simplement comment ce
-              mécanisme fonctionne et pourquoi une simulation indicative peut
-              être utile.
+              Le risque de change d&apos;un prêt CHF correspond à l&apos;effet de la variation entre l&apos;euro et le franc
+              suisse sur la contrevaleur du capital, des remboursements ou du montant à solder. Il peut devenir
+              important lorsque le bien financé est situé en France et valorisé en euros.
             </p>
             <div className="article-meta">
               <span>Risque de change</span>
               <span className="article-meta-sep" />
-              <span>5 min de lecture</span>
+              <span>7 min de lecture</span>
               <span className="article-meta-sep" />
               <span>Mai 2025</span>
             </div>
@@ -114,124 +130,197 @@ export default function ArticleRisqueChange() {
       <div className="article-body">
         <div className="article-body-inner">
 
-          <h2>Comprendre le taux EUR/CHF</h2>
+          <h2>Qu&apos;est-ce que le risque de change dans un prêt CHF ?</h2>
           <p>
-            Le taux de change EUR/CHF indique combien de francs suisses
-            correspondent à un euro à un instant donné. Lorsque ce taux baisse,
-            cela signifie que l'euro perd de la valeur face au franc suisse — ou
-            inversement, que le franc suisse devient plus fort.
+            Dans un <strong>prêt immobilier en francs suisses</strong>, tout ou partie du crédit est exprimé en CHF.
+            Cela signifie que la valeur en euros du capital, des mensualités ou du montant à rembourser varie en
+            fonction du taux de change entre l&apos;euro et le franc suisse.
           </p>
           <p>
-            Pour un prêt immobilier libellé en CHF, c'est ce rapport qui
-            détermine combien d'euros il faudra mobiliser pour rembourser une
-            somme en francs suisses. Un taux de 1,50 signifie qu'un franc suisse
-            vaut 0,67 euro. Un taux de 0,93 signifie qu'un franc suisse vaut
-            désormais plus d'un euro.
+            Le <strong>risque de change</strong> correspond précisément à cette dépendance. Lorsque le franc suisse
+            s&apos;apprécie face à l&apos;euro — c&apos;est-à-dire lorsque le taux EUR/CHF baisse — un montant exprimé en CHF
+            représente davantage d&apos;euros. À l&apos;inverse, lorsque l&apos;euro se renforce, la contrevaleur en euros diminue.
+          </p>
+          <p>
+            Ce mécanisme devient particulièrement significatif lorsque le bien immobilier financé est situé en
+            France et valorisé en euros. La dette est alors libellée dans une devise, le bien dans une autre. Cette
+            asymétrie structurelle — <strong>dette en CHF, bien en euros</strong> — est au cœur des contentieux sur
+            les prêts en francs suisses.
           </p>
 
-          <h2>Dette en CHF, bien en euros : une asymétrie structurelle</h2>
+          <h2>Pourquoi le taux EUR/CHF peut modifier le capital restant dû</h2>
           <p>
-            C'est l'un des points les plus importants à comprendre. Lorsqu'un
-            emprunteur souscrit un prêt en francs suisses pour financer un bien
-            situé en France, il crée une asymétrie structurelle : le bien est en
-            euros, la dette est en CHF.
+            Pour illustrer ce mécanisme, voici un exemple purement indicatif et pédagogique, sans valeur de
+            calcul définitif.
           </p>
           <p>
-            Tant que le bien prend de la valeur en euros et que le franc suisse
-            reste stable, cette asymétrie peut paraître sans conséquence. Mais si
-            le franc suisse s'apprécie — comme ce fut le cas après 2008 — la
-            situation peut se renverser. La valeur du bien en euros peut rester
-            identique tandis que la dette en CHF convertie en euros augmente.
+            Supposons un prêt souscrit en 2008 pour un capital de 150 000 CHF, à une époque où le taux EUR/CHF
+            était d&apos;environ 1,60. À ce taux, ce capital correspondait à environ 93 750 euros. Si, au moment d&apos;une
+            revente ou d&apos;un remboursement, le taux EUR/CHF est tombé à 0,93, ce même capital de 150 000 CHF
+            représente environ 161 000 euros — soit une différence indicative de l&apos;ordre de 67 000 euros.
+          </p>
+          <p>
+            Cet exemple est strictement illustratif. Il ne tient pas compte des remboursements intermédiaires, du
+            type de prêt, des conditions contractuelles ni de la situation personnelle de l&apos;emprunteur. Il sert
+            uniquement à visualiser la mécanique de la variation de contrevaleur. Chaque dossier est différent.
           </p>
 
           <div className="article-retenir">
             <p className="article-retenir-label">À retenir</p>
             <ul>
-              <li>Le risque de change ne se limite pas aux mensualités : il touche surtout le capital restant dû.</li>
-              <li>La revente ou le remboursement anticipé sont les moments les plus exposés.</li>
-              <li>Une variation EUR/CHF de 30 % sur 15 ans peut représenter plusieurs dizaines de milliers d'euros.</li>
+              <li>Le risque de change ne porte pas seulement sur les mensualités : il touche surtout le capital restant dû.</li>
+              <li>La revente et le remboursement anticipé sont les moments les plus exposés.</li>
+              <li>Une variation EUR/CHF significative peut modifier la contrevaleur en euros de plusieurs dizaines de milliers d&apos;euros.</li>
             </ul>
           </div>
 
-          <h2>L'impact sur le capital restant dû</h2>
+          <h2>Risque sur les mensualités, le capital et la revente</h2>
           <p>
-            Prenons un exemple indicatif. Un prêt souscrit en 2007 pour un
-            capital de 200 000 CHF, à une époque où 1 euro valait environ 1,65
-            CHF, correspondait à une dette d'environ 121 000 euros. En 2025, ce
-            même capital de 200 000 CHF (s'il était encore dû) représente plus
-            de 210 000 euros, car 1 euro ne vaut plus que 0,93 CHF.
+            Le risque de change peut se manifester différemment selon la phase du prêt et la structure du contrat :
+          </p>
+          <ul>
+            <li>
+              <strong>Sur les mensualités</strong> : si les remboursements sont calculés ou convertis en euros au
+              taux du jour, leur montant peut varier selon l&apos;évolution EUR/CHF. Ce risque est plus visible dans
+              les prêts libellés en CHF avec remboursement converti mensuellement.
+            </li>
+            <li>
+              <strong>Sur le capital restant dû</strong> : c&apos;est souvent le risque principal. Le montant à
+              rembourser en euros dépend du taux de change en vigueur. Si le franc suisse s&apos;est apprécié, la
+              contrevaleur peut être sensiblement supérieure au capital initialement emprunté.
+            </li>
+            <li>
+              <strong>Sur le coût total du crédit</strong> : l&apos;ensemble des remboursements effectués et du capital
+              soldé peut représenter une somme en euros supérieure à ce qu&apos;un prêt en euros aurait coûté.
+            </li>
+            <li>
+              <strong>Lors d&apos;une revente</strong> : le prix de vente est perçu en euros. Si le capital restant dû
+              en CHF, converti au taux du jour, dépasse ce prix, l&apos;emprunteur doit combler la différence.
+            </li>
+            <li>
+              <strong>Lors d&apos;un remboursement anticipé</strong> : le montant à solder dépend du taux EUR/CHF
+              au moment du remboursement. Un franc suisse fort renchérit mécaniquement ce montant en euros.
+            </li>
+          </ul>
+
+          <h2>Cas particulier du prêt in fine</h2>
+          <p>
+            Le prêt in fine est une structure dans laquelle le capital n&apos;est pas remboursé progressivement, mais
+            en totalité à l&apos;échéance du contrat. Pendant la durée du prêt, seuls les intérêts sont payés.
           </p>
           <p>
-            Cet exemple est purement illustratif et indicatif. Chaque dossier est
-            différent selon la date de souscription, le taux contractuel, le
-            type de prêt (in fine ou amortissable) et les remboursements déjà
-            effectués. Une simulation personnalisée peut aider à visualiser
-            l'impact sur une situation spécifique.
+            Dans le cadre d&apos;un <strong>prêt CHF in fine</strong>, le risque de change est concentré sur la date de
+            remboursement final. Le capital à solder — exprimé en CHF — doit être converti en euros au taux en
+            vigueur à cette date. Si le franc suisse s&apos;est fortement apprécié depuis la souscription, la contrevaleur
+            en euros peut être très sensiblement supérieure au montant emprunté.
+          </p>
+          <p>
+            Ce type de prêt était parfois proposé en association avec un support d&apos;assurance-vie en CHF ou un
+            placement de capitalisation. L&apos;analyse des documents remis avant signature est ici particulièrement
+            importante, car l&apos;emprunteur devait comprendre cette concentration du risque sur une seule échéance.
           </p>
 
           <div className="article-inline-cta">
             <p className="article-inline-cta-text">
-              Vous souhaitez estimer l'impact du taux EUR/CHF sur votre prêt ?
-              La simulation indicative vous donne un ordre de grandeur.
+              Vous souhaitez estimer l&apos;impact du taux EUR/CHF sur votre prêt ? La simulation indicative vous
+              donne un ordre de grandeur.
             </p>
             <Link href="/simulation" className="article-inline-cta-btn">
               Faire une simulation →
             </Link>
           </div>
 
-          <h2>Revente et remboursement anticipé : les moments les plus sensibles</h2>
+          <h2>Pourquoi la banque devait expliquer le risque</h2>
           <p>
-            Le risque de change d'un prêt CHF devient particulièrement visible
-            dans deux situations : la revente du bien immobilier et le
-            remboursement anticipé.
+            La jurisprudence relative aux prêts CHF a progressivement renforcé l&apos;exigence de transparence à
+            l&apos;égard de l&apos;emprunteur. Une simple mention du risque de change dans les conditions générales ne suffit
+            pas si elle ne permet pas de comprendre concrètement les effets possibles sur la durée du contrat.
           </p>
           <p>
-            Lors d'une revente, le prix de vente est encaissé en euros. Si le
-            capital restant dû — exprimé en CHF — dépasse ce prix de vente une
-            fois converti, l'emprunteur doit combler la différence de sa propre
-            poche. Ce scénario, souvent désigné comme une situation de
-            "capital négatif en devise", peut bloquer une revente ou entraîner
-            une perte réelle.
+            Selon les critères dégagés par les décisions récentes, la banque devait expliquer le fonctionnement
+            du mécanisme de change, fournir des simulations chiffrées sur plusieurs scénarios d&apos;évolution du taux
+            EUR/CHF, illustrer l&apos;impact sur le capital restant dû et mettre en évidence les risques en cas de
+            revente ou de remboursement anticipé.
           </p>
           <p>
-            Pour le remboursement anticipé, la logique est identique : le
-            montant à solder dépend du taux de change en vigueur le jour du
-            remboursement. Un franc suisse fort peut donc rendre un remboursement
-            anticipé nettement plus coûteux qu'anticipé.
-          </p>
-
-          <h2>Ce que l'emprunteur devait pouvoir comprendre</h2>
-          <p>
-            La jurisprudence récente rappelle que l'emprunteur devait être mis en
-            mesure de mesurer concrètement les effets du risque de change. Cela
-            suppose une information qui va au-delà d'une mention générale : des
-            simulations chiffrées sur différents scénarios EUR/CHF, projetées sur
-            la durée réelle du prêt.
-          </p>
-          <p>
-            Si cette information n'a pas été fournie — ou si elle était trop
-            abstraite pour permettre une compréhension réelle — cela peut ouvrir
-            une piste d'analyse. Pour en savoir plus sur les exigences
-            jurisprudentielles,{" "}
+            Si cette information n&apos;a pas été fournie ou était trop abstraite pour permettre une compréhension
+            réelle, cela peut justifier un examen du dossier. Pour en savoir plus sur les critères
+            jurisprudentiels,{" "}
             <Link href="/jurisprudence">
               consultez notre page sur la jurisprudence des prêts CHF
+            </Link>{" "}
+            ou l&apos;analyse de la{" "}
+            <Link href="/blog/cour-cassation-9-juillet-2025-pret-chf">
+              décision du 9 juillet 2025
             </Link>
             .
           </p>
 
-          <h2>Comment se préparer à l'analyse</h2>
+          <h2>Comment estimer l&apos;impact d&apos;un prêt CHF ?</h2>
           <p>
-            Avant de faire analyser un dossier, il est utile de rassembler les
-            documents disponibles : offre de prêt originale, conditions
-            générales et particulières, tableaux d'amortissement, simulations
-            remises par la banque et relevés de compte en CHF.
+            Avant de faire analyser un dossier, il est utile de réunir les éléments essentiels du prêt. Ce tableau
+            récapitule les informations les plus importantes, leur utilité et où les trouver.
           </p>
+          <div style={{ overflowX: "auto" }}>
+            <table className="article-table">
+              <thead>
+                <tr>
+                  <th>Élément</th>
+                  <th>Pourquoi il compte</th>
+                  <th>Où le trouver</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Montant initial en CHF</td>
+                  <td>Base de calcul pour la contrevaleur actuelle</td>
+                  <td>Offre de prêt, conditions particulières</td>
+                </tr>
+                <tr>
+                  <td>Taux EUR/CHF à la souscription</td>
+                  <td>Permet de calculer la contrevaleur d&apos;origine</td>
+                  <td>Conditions particulières, archives banque</td>
+                </tr>
+                <tr>
+                  <td>Capital restant dû</td>
+                  <td>Montant à rembourser exprimé en CHF</td>
+                  <td>Dernier tableau d&apos;amortissement</td>
+                </tr>
+                <tr>
+                  <td>Durée du prêt</td>
+                  <td>Période sur laquelle s&apos;apprécie le risque</td>
+                  <td>Offre de prêt</td>
+                </tr>
+                <tr>
+                  <td>Date de souscription</td>
+                  <td>Permet de situer le taux EUR/CHF d&apos;origine</td>
+                  <td>Offre de prêt</td>
+                </tr>
+                <tr>
+                  <td>Type de prêt</td>
+                  <td>In fine ou amortissable : profil de risque différent</td>
+                  <td>Offre de prêt, conditions générales</td>
+                </tr>
+                <tr>
+                  <td>Avenants éventuels</td>
+                  <td>Peuvent avoir modifié le capital ou les conditions</td>
+                  <td>Avenants signés</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <p>
-            Ces pièces permettent de vérifier si l'information sur le risque de
-            change était présente, chiffrée et personnalisée. Pour plus de
-            détails,{" "}
+            Le{" "}
+            <Link href="/simulation">simulateur indicatif</Link>{" "}
+            permet d&apos;obtenir une première fourchette à partir de ces informations. Il ne remplace pas l&apos;analyse du
+            contrat, mais peut aider à visualiser un ordre de grandeur. Pour savoir quels documents réunir,
+            consultez le{" "}
             <Link href="/blog/documents-pret-chf">
-              consultez notre guide sur les documents utiles pour un prêt CHF
+              guide sur les documents à vérifier pour un prêt CHF
+            </Link>
+            . Pour comprendre le profil spécifique des emprunteurs frontaliers,{" "}
+            <Link href="/blog/pret-chf-frontalier">
+              lisez notre article sur le prêt CHF frontalier
             </Link>
             .
           </p>
@@ -250,9 +339,8 @@ export default function ArticleRisqueChange() {
           </section>
 
           <p className="article-legal">
-            Cet article a une vocation pédagogique et ne constitue pas un avis
-            juridique personnalisé. L'analyse dépend toujours du contrat, des
-            documents remis et de la situation de l'emprunteur.
+            Cet article a une vocation pédagogique et ne constitue pas un avis juridique personnalisé.
+            L&apos;analyse dépend toujours du contrat, des documents remis et de la situation de l&apos;emprunteur.
           </p>
 
           <Link href="/blog" className="article-back">
@@ -268,18 +356,17 @@ export default function ArticleRisqueChange() {
             <p className="eyebrow" style={{ color: "#8dc3a5" }}>
               Étape suivante
             </p>
-            <h2>Estimez l'impact EUR/CHF sur votre prêt</h2>
+            <h2>Estimez l&apos;impact EUR/CHF sur votre prêt</h2>
             <p>
-              La simulation indicative vous permet de visualiser l'impact d'une
-              variation du taux de change sur votre capital restant dû ou votre
-              coût de remboursement.
+              La simulation indicative vous permet de visualiser l&apos;impact d&apos;une variation du taux de change
+              sur votre capital restant dû ou votre coût de remboursement.
             </p>
             <div className="article-cta-actions">
               <Link href="/simulation" className="juri-cta-primary-btn">
                 Faire une simulation indicative
               </Link>
               <Link href="/eligibilite" className="juri-cta-secondary-btn">
-                Tester votre éligibilité à un recours prêt CHF
+                Tester mon éligibilité
               </Link>
             </div>
           </div>

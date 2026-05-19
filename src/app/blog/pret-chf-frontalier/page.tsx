@@ -1,36 +1,50 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://VOTRE-DOMAINE.fr";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt CHF frontalier : critères à vérifier",
+  title: "Prêt CHF frontalier : critères à vérifier | Prêts CHF Info",
   description:
-    "Découvrez pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat, notamment en cas de bien situé en France.",
+    "Comprendre pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat, notamment lorsque le bien est situé en France.",
   alternates: { canonical: `${SITE_URL}/blog/pret-chf-frontalier` },
   openGraph: {
-    title: "Prêt CHF frontalier : critères à vérifier",
+    title: "Prêt CHF frontalier : critères à vérifier | Prêts CHF Info",
     description:
-      "Découvrez pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat.",
+      "Comprendre pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat.",
     url: `${SITE_URL}/blog/pret-chf-frontalier`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prêt CHF frontalier : critères à vérifier | Prêts CHF Info",
+    description:
+      "Comprendre pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat.",
+  },
 };
 
 const faq = [
   {
-    q: "Un frontalier payé en CHF est-il forcément protégé contre le risque de change ?",
-    a: "Pas nécessairement. Le fait de percevoir des revenus en francs suisses peut réduire le risque de change sur les mensualités, mais ne protège pas de la même façon lorsque le bien est situé en France et que le capital doit être remboursé en euros — notamment en cas de revente.",
+    q: "Un frontalier payé en CHF peut-il être concerné par le risque de change ?",
+    a: "Oui, potentiellement. Le fait de percevoir des revenus en francs suisses couvre une partie du risque sur les mensualités, mais ne protège pas du risque de change lors d'une revente, d'un remboursement anticipé ou d'une évolution de la situation professionnelle.",
   },
   {
-    q: "Le statut de frontalier peut-il changer au cours du prêt ?",
-    a: "Oui. Un emprunteur peut cesser son activité transfrontalière, partir à la retraite ou changer d'employeur. Si à ce moment-là le capital restant dû est encore libellé en CHF, la situation de change peut devenir défavorable.",
+    q: "Le fait de travailler en Suisse suffit-il à exclure le risque ?",
+    a: "Non. La jurisprudence récente rappelle que le statut de frontalier ne dispense pas la banque de son obligation d'information transparente sur le risque de change. L'appréciation dépend des clauses du contrat et des documents remis avant signature.",
   },
   {
-    q: "Ce test est-il suffisant pour connaître ma situation ?",
-    a: "Non. Ce guide a une vocation pédagogique. Seule l'analyse du contrat, des notices et des documents remis avant signature permet d'apprécier les éléments propres à chaque dossier.",
+    q: "Quels documents vérifier en priorité ?",
+    a: "L'offre de prêt, les conditions particulières, les notices d'information sur le risque de change, les simulations chiffrées remises par la banque et les tableaux d'amortissement sont les pièces les plus importantes à réunir.",
+  },
+  {
+    q: "Un prêt déjà remboursé peut-il être analysé ?",
+    a: "Oui, dans certains cas. Une analyse peut rester possible selon les délais applicables et les circonstances du dossier, notamment en cas de revente ou de remboursement anticipé réalisé dans un contexte de franc suisse fort.",
+  },
+  {
+    q: "La jurisprudence garantit-elle un recours ?",
+    a: "Non. La jurisprudence précise les critères d'analyse de l'information contractuelle, mais ne crée pas de droit automatique. Chaque dossier est apprécié selon les clauses du contrat, les pièces disponibles et la situation de l'emprunteur.",
   },
 ];
 
@@ -42,10 +56,10 @@ const jsonLd = {
       "@id": `${SITE_URL}/blog/pret-chf-frontalier`,
       headline: "Prêt CHF frontalier : êtes-vous concerné par un recours ?",
       description:
-        "Comprendre pourquoi les frontaliers peuvent être concernés par le risque de change, même lorsqu'ils percevaient des revenus en francs suisses.",
+        "Comprendre pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat, notamment lorsque le bien est situé en France.",
       url: `${SITE_URL}/blog/pret-chf-frontalier`,
       datePublished: "2025-05-13",
-      dateModified: "2025-05-13",
+      dateModified: "2025-05-19",
       inLanguage: "fr-FR",
       author: { "@type": "Organization", name: "Prêts CHF Info" },
       publisher: { "@type": "Organization", name: "Prêts CHF Info" },
@@ -56,7 +70,12 @@ const jsonLd = {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` },
         { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
-        { "@type": "ListItem", position: 3, name: "Prêt CHF frontalier", item: `${SITE_URL}/blog/pret-chf-frontalier` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Prêt CHF frontalier",
+          item: `${SITE_URL}/blog/pret-chf-frontalier`,
+        },
       ],
     },
     {
@@ -92,17 +111,15 @@ export default function ArticlePretCHFFrontalier() {
             <span className="article-cat-badge">Frontaliers</span>
             <h1>Prêt CHF frontalier : êtes-vous concerné par un recours ?</h1>
             <p className="article-hero-intro">
-              Un prêt CHF frontalier peut mériter une vérification lorsque le
-              crédit est lié au franc suisse, que le bien financé est situé en
-              France et que l'information sur le risque de change n'a pas été
-              suffisamment claire ou chiffrée. Ce guide pédagogique explique
-              pourquoi le statut de frontalier ne constitue pas toujours une
-              protection totale.
+              Un frontalier ayant souscrit un prêt immobilier en francs suisses peut être concerné par une
+              vérification lorsque le bien financé est situé en France, que la dette dépend du CHF et que
+              l&apos;information sur le risque de change n&apos;a pas été suffisamment claire. Ce guide explique
+              pourquoi le statut de frontalier ne constitue pas toujours une protection totale.
             </p>
             <div className="article-meta">
               <span>Frontaliers</span>
               <span className="article-meta-sep" />
-              <span>6 min de lecture</span>
+              <span>7 min de lecture</span>
               <span className="article-meta-sep" />
               <span>Mai 2025</span>
             </div>
@@ -114,134 +131,208 @@ export default function ArticlePretCHFFrontalier() {
       <div className="article-body">
         <div className="article-body-inner">
 
-          <h2>Qu'est-ce qu'un prêt CHF frontalier ?</h2>
+          <h2>Pourquoi les frontaliers ont souscrit des prêts en CHF</h2>
           <p>
-            Un prêt CHF frontalier désigne un crédit immobilier souscrit par un
-            emprunteur qui exerce son activité professionnelle en Suisse tout en
-            résidant en France. Ces contrats sont souvent libellés en francs
-            suisses ou indexés sur le franc suisse, ce qui signifie que le
-            capital et parfois les mensualités sont exprimés dans cette devise.
+            Entre les années 2000 et 2010, de nombreux emprunteurs frontaliers travaillant en Suisse ont souscrit
+            des prêts immobiliers en francs suisses pour financer un bien situé en France. Cette pratique reposait
+            sur une logique apparente : percevoir des revenus en CHF et rembourser dans la même devise semblait
+            naturellement cohérent.
           </p>
           <p>
-            À l'époque de souscription, beaucoup de ces emprunteurs percevaient
-            leurs revenus directement en CHF. Cette situation pouvait laisser
-            penser que le risque de change était naturellement absorbé par la
-            structure même du prêt. En réalité, la question est plus complexe.
+            À cela s&apos;ajoutait un argument commercial fort : les taux d&apos;intérêt proposés sur les prêts en CHF
+            étaient souvent inférieurs à ceux des crédits en euros. Dans un contexte de taux attractifs et de
+            parité euro / franc suisse relativement stable, ces contrats paraissaient avantageux. La cohérence
+            apparente entre la devise des revenus et celle du crédit donnait l&apos;impression d&apos;une protection naturelle
+            contre le risque de change.
+          </p>
+          <p>
+            La réalité s&apos;est avérée plus complexe. Le bien immobilier financé était situé en France, valorisé en
+            euros. La dette, elle, dépendait du franc suisse. Cette asymétrie structurelle est au cœur de la
+            problématique des <strong>prêts CHF frontaliers</strong>.
           </p>
 
-          <h2>Pourquoi les revenus en CHF ne suffisent pas toujours</h2>
+          <h2>Pourquoi le risque de change peut exister malgré des revenus en CHF</h2>
           <p>
-            Percevoir un salaire en francs suisses couvre effectivement une
-            partie du risque de change sur les mensualités courantes. Mais ce
-            raisonnement atteint ses limites dans plusieurs situations
-            concrètes.
+            Percevoir un salaire en francs suisses couvre effectivement une partie du risque de change sur les
+            mensualités courantes. Mais ce raisonnement atteint ses limites dans plusieurs situations concrètes.
           </p>
           <p>
-            D'abord, le bien immobilier financé est en France, libellé en euros.
-            Lors d'une revente, c'est le prix en euros qui sera reçu. Si le
-            capital restant dû est encore exprimé en CHF, et que le franc suisse
-            s'est apprécié, le montant à rembourser en euros peut dépasser le
-            prix de cession. C'est là que le risque se matérialise le plus
-            clairement.
+            D&apos;abord, lors d&apos;une <strong>revente du bien</strong>, le prix de cession est encaissé en euros. Si le
+            capital restant dû — exprimé en CHF — est plus élevé que la valeur de vente une fois converti, l&apos;emprunteur
+            peut se retrouver dans une situation délicate. Ce risque ne dépend pas des revenus au moment de la
+            cession, mais du taux EUR/CHF à cette date.
           </p>
           <p>
-            Ensuite, la situation professionnelle peut évoluer. Un frontalier
-            peut changer d'employeur, rentrer en France, partir en retraite ou
-            traverser une période de chômage. À ce moment-là, les revenus ne
-            sont plus en CHF, et le prêt peut devenir une charge difficile à
-            absorber.
+            Ensuite, la situation professionnelle évolue. Un frontalier peut changer d&apos;employeur, rentrer travailler
+            en France, partir à la retraite ou perdre son emploi suisse. À ce moment-là, les revenus ne sont plus
+            en CHF, et la couverture naturelle supposée par le prêt disparaît. Le risque de change devient alors
+            pleinement visible.
+          </p>
+          <p>
+            Enfin, la durée d&apos;un crédit immobilier — souvent 15 à 25 ans — est suffisamment longue pour que le
+            taux EUR/CHF connaisse des variations significatives. Ces variations peuvent modifier substantiellement
+            la contrevaleur en euros du capital restant dû, indépendamment de la nature des revenus de l&apos;emprunteur.
           </p>
 
           <div className="article-retenir">
             <p className="article-retenir-label">À retenir</p>
             <ul>
-              <li>Le bien financé est en euros, le prêt en CHF : une asymétrie fondamentale.</li>
-              <li>La revente, la retraite ou un changement professionnel peuvent exposer à une perte de change.</li>
-              <li>L'information sur ces scénarios devait être claire, chiffrée et remise avant signature.</li>
+              <li>Les revenus en CHF couvrent les mensualités, mais pas le capital lors d&apos;une revente.</li>
+              <li>La retraite, le retour en France ou la perte d&apos;emploi suisse peuvent modifier l&apos;exposition au risque.</li>
+              <li>L&apos;information sur ces scénarios devait être claire, chiffrée et remise avant la signature.</li>
             </ul>
           </div>
 
-          <h2>La durée du prêt : un facteur souvent sous-estimé</h2>
+          <h2>Les situations fréquentes à vérifier</h2>
           <p>
-            Un crédit immobilier s'étend généralement sur 15 à 25 ans. Sur cette
-            durée, le taux EUR/CHF peut connaître des variations considérables.
-            En 2007, un euro valait environ 1,68 franc suisse. En 2025, ce même
-            euro ne vaut plus qu'environ 0,93 franc suisse. Pour un emprunteur
-            qui avait souscrit un prêt de 200 000 CHF à cette époque, la
-            contrevaleur en euros a augmenté de façon significative.
+            Certaines configurations méritent une attention particulière. Ce tableau présente les situations les
+            plus courantes, les raisons de les examiner et les documents utiles dans chaque cas.
           </p>
-          <p>
-            C'est précisément sur ce point que l'exigence d'information
-            transparente prend toute son importance. L'emprunteur devait être
-            mis en mesure de comprendre que ce risque ne se limitait pas à une
-            variation anecdotique, mais pouvait affecter substantiellement le
-            coût réel du crédit.
-          </p>
+          <div style={{ overflowX: "auto" }}>
+            <table className="article-table">
+              <thead>
+                <tr>
+                  <th>Situation</th>
+                  <th>Pourquoi vérifier</th>
+                  <th>Documents utiles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bien situé en France</td>
+                  <td>La revente en euros peut créer un déséquilibre avec la dette en CHF</td>
+                  <td>Offre de prêt, conditions particulières</td>
+                </tr>
+                <tr>
+                  <td>Revente envisagée ou effectuée</td>
+                  <td>Le capital à solder dépend du taux EUR/CHF au moment de la cession</td>
+                  <td>Documents de vente, capital restant dû</td>
+                </tr>
+                <tr>
+                  <td>Perte ou cessation de revenus en CHF</td>
+                  <td>La couverture naturelle disparaît si les revenus en CHF cessent</td>
+                  <td>Bulletins de salaire, documents RH</td>
+                </tr>
+                <tr>
+                  <td>Prêt in fine</td>
+                  <td>Le capital est remboursé en totalité à l&apos;échéance, concentrant le risque</td>
+                  <td>Tableau d&apos;amortissement, type de contrat</td>
+                </tr>
+                <tr>
+                  <td>Absence de simulation chiffrée</td>
+                  <td>La banque devait illustrer l&apos;impact d&apos;une variation EUR/CHF</td>
+                  <td>Dossier remis avant signature</td>
+                </tr>
+                <tr>
+                  <td>Avenant ou renégociation</td>
+                  <td>Une renégociation peut avoir modifié le capital ou les conditions</td>
+                  <td>Avenant signé, nouveau tableau d&apos;amortissement</td>
+                </tr>
+                <tr>
+                  <td>Prêt déjà remboursé</td>
+                  <td>Une analyse peut rester possible selon les délais applicables</td>
+                  <td>Documents d&apos;archives, actes de remboursement</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>Ce que la banque devait expliquer</h2>
           <p>
-            Selon les exigences progressivement renforcées par la jurisprudence,
-            la banque était tenue de fournir une information claire et
-            compréhensible sur le risque de change. Cela peut impliquer :
+            Selon les exigences progressivement renforcées par la jurisprudence, la banque avait l&apos;obligation de
+            fournir une information claire et compréhensible sur le risque de change. Cette obligation ne se
+            résumait pas à l&apos;existence d&apos;une clause dans les conditions générales. Elle impliquait une information
+            active, illustrée et adaptée à la situation concrète de l&apos;emprunteur.
           </p>
-          <ul>
-            <li>Des simulations chiffrées illustrant plusieurs hypothèses de variation EUR/CHF ;</li>
-            <li>Une explication de l'impact sur le capital restant dû en cas d'appréciation du franc suisse ;</li>
-            <li>Une mise en garde sur les conséquences possibles en cas de revente ou de remboursement anticipé ;</li>
-            <li>Une information personnalisée, non une simple clause abstraite dans les conditions générales.</li>
-          </ul>
           <p>
-            Si ces éléments n'ont pas été remis ou si la documentation fournie
-            ne permettait pas à l'emprunteur de comprendre concrètement son
-            engagement, cela peut justifier une vérification du dossier.
+            Concrètement, la banque devait expliquer comment fonctionne le mécanisme de change dans ce type de
+            prêt, présenter l&apos;impact possible d&apos;une variation du taux EUR/CHF sur le capital restant dû, fournir
+            des simulations chiffrées sur plusieurs scénarios — y compris défavorables — et alerter sur les
+            conséquences possibles en cas de revente, de remboursement anticipé ou d&apos;évolution de la situation
+            professionnelle.
+          </p>
+          <p>
+            Si ces éléments n&apos;ont pas été remis avant la signature, ou si l&apos;information était trop abstraite pour
+            permettre une compréhension concrète, cela peut justifier une vérification du dossier. Pour
+            approfondir ce mécanisme,{" "}
+            <Link href="/blog/risque-change-pret-chf">
+              consultez notre guide sur le risque de change d&apos;un prêt CHF
+            </Link>
+            .
           </p>
 
           <div className="article-inline-cta">
             <p className="article-inline-cta-text">
-              Vous avez souscrit un prêt immobilier en francs suisses en tant
-              que frontalier ? Identifiez les signaux à vérifier avant d'aller
-              plus loin.
+              Vous avez souscrit un prêt immobilier en francs suisses en tant que frontalier ? Identifiez
+              les signaux à vérifier en moins d&apos;une minute.
             </p>
             <Link href="/eligibilite" className="article-inline-cta-btn">
-              Tester votre éligibilité →
+              Tester mon éligibilité →
             </Link>
           </div>
 
-          <h2>Dans quels cas vérifier votre prêt CHF frontalier ?</h2>
+          <h2>Ce que la jurisprudence récente a changé pour les frontaliers</h2>
           <p>
-            Certaines situations peuvent justifier une analyse approfondie du
-            contrat, sous réserve des documents disponibles et de la situation
-            propre à chaque dossier :
-          </p>
-          <ul>
-            <li>Vous avez souscrit le prêt en tant que frontalier, avec un bien situé en France ;</li>
-            <li>Vous avez vendu ou revendu le bien et constaté un surcoût lié au change ;</li>
-            <li>Vous avez cessé votre activité en Suisse avant d'avoir soldé le prêt ;</li>
-            <li>Les documents remis avant signature ne contenaient pas de simulations chiffrées ;</li>
-            <li>Vous avez effectué un remboursement anticipé dans un contexte de franc suisse fort.</li>
-          </ul>
-          <p>
-            Ces situations ne garantissent pas un recours, mais peuvent ouvrir
-            une piste d'analyse. L'appréciation dépend toujours du contrat, des
-            pièces disponibles et des circonstances propres au dossier.
-          </p>
-
-          <h2>Prêt frontalier et jurisprudence récente</h2>
-          <p>
-            Les décisions rendues par la Cour de cassation en 2024 et 2025 ont
-            progressivement renforcé l'attention portée à l'information due aux
-            emprunteurs. En particulier, le fait de percevoir des revenus en CHF
-            n'est plus considéré comme suffisant pour exclure toute question sur
-            la transparence de l'information contractuelle.
+            Pendant longtemps, le statut de frontalier a pu être présenté comme une protection naturelle contre
+            le risque de change. La jurisprudence récente a progressivement nuancé cette présomption.
           </p>
           <p>
-            Pour comprendre l'évolution de cette jurisprudence et ses
-            implications concrètes,{" "}
+            Les décisions rendues par la Cour de cassation, notamment en 2025, rappellent que le fait de
+            percevoir des revenus en CHF ne dispense pas la banque de son obligation d&apos;information transparente.
+            L&apos;appréciation du risque porte sur la durée totale du contrat, y compris les scénarios où la situation
+            professionnelle de l&apos;emprunteur évolue défavorablement.
+          </p>
+          <p>
+            Ces évolutions jurisprudentielles ne signifient pas que tous les recours aboutissent. Elles précisent
+            les critères d&apos;analyse, mais chaque dossier reste examiné au regard de ses pièces propres. Pour
+            comprendre l&apos;évolution de la jurisprudence et les décisions clés,{" "}
             <Link href="/jurisprudence">
-              consultez notre analyse de la jurisprudence des prêts CHF
+              consultez notre page jurisprudence prêt CHF
+            </Link>{" "}
+            ou l&apos;analyse de la{" "}
+            <Link href="/blog/cour-cassation-9-juillet-2025-pret-chf">
+              décision de la Cour de cassation du 9 juillet 2025
             </Link>
             .
           </p>
+
+          <h2>Que faire si vous êtes frontalier avec un prêt CHF ?</h2>
+          <p>
+            Si vous avez souscrit un prêt immobilier en francs suisses en tant que frontalier, voici une démarche
+            pédagogique en cinq étapes pour mieux comprendre votre situation :
+          </p>
+          <ol>
+            <li>
+              <strong>Identifier la devise du prêt</strong> — Vérifiez dans l&apos;offre de prêt et les conditions
+              particulières si le capital est libellé, remboursable ou indexé en CHF. Cette information figure
+              généralement dans les premières pages du contrat.
+            </li>
+            <li>
+              <strong>Relire les documents de souscription</strong> — Reprenez les notices d&apos;information, les
+              simulations et les échanges remis avant la signature. La présence ou l&apos;absence de simulations
+              chiffrées sur le risque de change est un signal important.
+            </li>
+            <li>
+              <strong>Faire le test d&apos;éligibilité</strong> — Le{" "}
+              <Link href="/eligibilite">test d&apos;éligibilité en 3 questions</Link>{" "}
+              permet d&apos;identifier rapidement les signaux principaux à examiner dans votre dossier.
+            </li>
+            <li>
+              <strong>Réaliser une simulation indicative</strong> — Le{" "}
+              <Link href="/simulation">simulateur indicatif</Link>{" "}
+              donne un ordre de grandeur avant d&apos;analyser les documents dans le détail. Le résultat est présenté
+              sous forme de fourchette, non comme un montant définitif.
+            </li>
+            <li>
+              <strong>Rassembler les pièces</strong> — Réunissez l&apos;offre de prêt, les conditions générales et
+              particulières, les notices d&apos;information, les avenants éventuels, les tableaux d&apos;amortissement et les
+              échanges avec la banque. Consultez le{" "}
+              <Link href="/blog/documents-pret-chf">
+                guide sur les documents à vérifier pour un prêt CHF
+              </Link>
+              .
+            </li>
+          </ol>
 
           {/* FAQ */}
           <section className="article-faq">
@@ -257,9 +348,8 @@ export default function ArticlePretCHFFrontalier() {
           </section>
 
           <p className="article-legal">
-            Cet article a une vocation pédagogique et ne constitue pas un avis
-            juridique personnalisé. L'analyse dépend toujours du contrat, des
-            documents remis et de la situation de l'emprunteur.
+            Cet article a une vocation pédagogique et ne constitue pas un avis juridique personnalisé.
+            L&apos;analyse dépend toujours du contrat, des documents remis et de la situation de l&apos;emprunteur.
           </p>
 
           <Link href="/blog" className="article-back">
@@ -277,16 +367,15 @@ export default function ArticlePretCHFFrontalier() {
             </p>
             <h2>Votre prêt CHF mérite peut-être une vérification</h2>
             <p>
-              Le test d'éligibilité permet d'identifier les signaux à vérifier
-              dans un prêt immobilier en francs suisses, qu'il soit en cours ou
-              déjà remboursé.
+              Le test d&apos;éligibilité permet d&apos;identifier les signaux à vérifier dans un prêt immobilier en
+              francs suisses, qu&apos;il soit en cours ou déjà remboursé.
             </p>
             <div className="article-cta-actions">
               <Link href="/eligibilite" className="juri-cta-primary-btn">
-                Tester votre éligibilité à un recours prêt CHF
+                Tester mon éligibilité
               </Link>
-              <Link href="/jurisprudence" className="juri-cta-secondary-btn">
-                Comprendre la jurisprudence
+              <Link href="/simulation" className="juri-cta-secondary-btn">
+                Faire une simulation indicative
               </Link>
             </div>
           </div>
