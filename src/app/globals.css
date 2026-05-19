@@ -6262,3 +6262,304 @@ a {
     letter-spacing: -1.4px;
   }
 }
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+
+.site-footer {
+  background: var(--soft);
+  border-top: 1px solid var(--border);
+  padding: 36px 0;
+}
+
+.site-footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.site-footer-disclaimer {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+}
+
+.site-footer-links a {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 140ms ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-footer-links a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.site-footer-copy {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ─────────────────────────────────────────
+   PAGES LÉGALES (mentions, confidentialité)
+───────────────────────────────────────── */
+
+.legal-page {
+  padding: 72px 0 96px;
+}
+
+.legal-page-inner {
+  max-width: 800px;
+}
+
+.legal-page-header {
+  margin-bottom: 56px;
+}
+
+.legal-page-header h1 {
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: -1.6px;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.legal-page-intro {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.legal-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.legal-section {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+
+.legal-section h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.4px;
+  margin-bottom: 16px;
+}
+
+.legal-section p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section a {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 140ms ease;
+}
+
+.legal-section a:hover {
+  border-bottom-color: var(--primary);
+}
+
+.legal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.legal-list li {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.legal-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.legal-list a {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 140ms ease;
+}
+
+.legal-list a:hover {
+  border-bottom-color: var(--primary);
+}
+
+/* ─────────────────────────────────────────
+   PAGE À PROPOS
+───────────────────────────────────────── */
+
+.apropos-page {
+  width: 100%;
+}
+
+.apropos-hero-inner {
+  padding-top: 80px;
+  padding-bottom: 72px;
+  max-width: 900px;
+}
+
+.apropos-hero-inner h1 {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1.8px;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.apropos-intro {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.75;
+  max-width: 760px;
+}
+
+.apropos-section-inner {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.apropos-section-header {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.apropos-section-header h2 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.apropos-text-block {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.apropos-text-block p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.apropos-pedagogy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.apropos-pedagogy-item {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px 26px;
+}
+
+.apropos-pedagogy-item h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+
+.apropos-pedagogy-item p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.apropos-contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.apropos-contact-block p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.apropos-email-link {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary);
+  transition: opacity 140ms ease;
+}
+
+.apropos-email-link:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .apropos-pedagogy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .apropos-hero-inner h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .apropos-section-header h2 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .legal-page-header h1 {
+    font-size: 36px;
+    letter-spacing: -0.8px;
+  }
+
+  .site-footer-links {
+    gap: 8px 16px;
+  }
+}
