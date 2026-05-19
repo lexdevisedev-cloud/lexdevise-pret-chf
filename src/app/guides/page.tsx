@@ -58,6 +58,14 @@ const activeGuides = [
     slug: "dernieres-jurisprudences-franc-suisse-particuliers",
     readingTime: "7 min",
   },
+  {
+    category: "Frontaliers",
+    title: "Prêt frontalier Suisse et CHF",
+    description:
+      "Les points à vérifier lorsqu'un frontalier suisse a souscrit un prêt immobilier lié au franc suisse : risque de change sur la durée, bien situé en France, clauses et documents.",
+    slug: "pret-frontalier-suisse-chf",
+    readingTime: "7 min",
+  },
 ];
 
 const howToSteps = [
