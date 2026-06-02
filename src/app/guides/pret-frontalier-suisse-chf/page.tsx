@@ -4,12 +4,12 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt frontalier Suisse et CHF : risques à vérifier | Prêts CHF Info",
+  title: "Prêt frontalier Suisse : risque CHF, bien en France et recours",
   description:
-    "Comprendre les points à vérifier lorsqu'un frontalier suisse a souscrit un prêt immobilier lié au franc suisse pour financer un bien en France.",
+    "Vous êtes frontalier suisse avec un prêt immobilier lié au CHF ? Comprenez le risque de change, les clauses à vérifier et les documents utiles.",
   alternates: { canonical: `${SITE_URL}/guides/pret-frontalier-suisse-chf` },
   openGraph: {
-    title: "Prêt frontalier Suisse et CHF : risques à vérifier | Prêts CHF Info",
+    title: "Prêt frontalier Suisse : risque CHF, bien en France et recours | Prêts CHF Info",
     description:
       "Revenus en CHF, bien en France, revente ou retraite : les points à vérifier dans un prêt immobilier en francs suisses souscrit par un frontalier.",
     url: `${SITE_URL}/guides/pret-frontalier-suisse-chf`,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prêt frontalier Suisse et CHF : risques à vérifier | Prêts CHF Info",
+    title: "Prêt frontalier Suisse : risque CHF, bien en France et recours | Prêts CHF Info",
     description:
       "Les points à vérifier dans un prêt immobilier en francs suisses souscrit par un frontalier : risque de change, clauses, documents et jurisprudence.",
   },
@@ -149,6 +149,82 @@ export default function GuideFrontalierCHF() {
       {/* BODY */}
       <div className="article-body">
         <div className="article-body-inner">
+
+          <h2>Prêt frontalier : les 3 situations à surveiller</h2>
+          <div className="juri-four-grid">
+            <article className="juri-revirement-card">
+              <h3>Revenus en francs suisses et bien immobilier en France</h3>
+              <p>
+                Le prêt peut sembler cohérent au départ, mais la valeur du bien
+                reste souvent exprimée en euros alors que la dette peut
+                dépendre du CHF.
+              </p>
+            </article>
+            <article className="juri-revirement-card">
+              <h3>Changement de revenus pendant la durée du prêt</h3>
+              <p>
+                Perte d&apos;emploi suisse, retraite, passage à des revenus en
+                euros ou évolution professionnelle peuvent modifier l&apos;équilibre
+                initial.
+              </p>
+            </article>
+            <article className="juri-revirement-card">
+              <h3>Revente ou remboursement anticipé du bien</h3>
+              <p>
+                Le capital restant dû et le coût réel à solder doivent être
+                vérifiés à partir des documents bancaires.
+              </p>
+            </article>
+          </div>
+
+          <h2>Situations fréquentes d&apos;un prêt frontalier en CHF</h2>
+          <table className="article-table">
+            <thead>
+              <tr>
+                <th>Situation</th>
+                <th>Risque possible</th>
+                <th>Document à vérifier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Revenus CHF / bien en France</td>
+                <td>Décalage entre dette et valeur du bien</td>
+                <td>Offre de prêt</td>
+              </tr>
+              <tr>
+                <td>Passage à des revenus en euros</td>
+                <td>Effort de remboursement modifié</td>
+                <td>Justificatifs de revenus</td>
+              </tr>
+              <tr>
+                <td>Revente du bien</td>
+                <td>Capital restant dû potentiellement élevé</td>
+                <td>Décompte de remboursement</td>
+              </tr>
+              <tr>
+                <td>Retraite</td>
+                <td>Revenus différents de ceux de la souscription</td>
+                <td>Documents de situation</td>
+              </tr>
+              <tr>
+                <td>Remboursement anticipé</td>
+                <td>Coût réel à solder</td>
+                <td>Décompte bancaire</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Pour situer ces points dans le cadre plus large des prêts CHF,
+            consultez la <Link href="/jurisprudence">jurisprudence prêt CHF</Link>,
+            la <Link href="/simulation">simulation indicative</Link>, le{" "}
+            <Link href="/blog/pret-chf-frontalier">guide prêt CHF frontalier</Link>,
+            la page sur le{" "}
+            <Link href="/guides/pret-toxique-franc-suisse">
+              prêt toxique en francs suisses
+            </Link>{" "}
+            ou le <Link href="/eligibilite">test d&apos;éligibilité</Link>.
+          </p>
 
           <h2>Pourquoi les frontaliers ont souscrit des prêts en francs suisses</h2>
           <p>

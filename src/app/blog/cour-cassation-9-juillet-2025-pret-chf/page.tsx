@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Cour de cassation 9 juillet 2025 et prêts CHF | Prêts CHF Info",
+  title: "Cour de cassation 9 juillet 2025 et prêts CHF",
   description:
     "Comprendre les décisions du 9 juillet 2025 sur les prêts immobiliers en francs suisses, le risque de change, les frontaliers et l'exigence d'information claire.",
   alternates: { canonical: `${SITE_URL}/blog/cour-cassation-9-juillet-2025-pret-chf` },

@@ -4,14 +4,14 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt en devise CHF Crédit Mutuel : points à vérifier | Prêts CHF Info",
+  title: "Prêt en devise CHF Crédit Mutuel : clauses et risque de change",
   description:
-    "Vous avez souscrit un prêt en devise CHF auprès du Crédit Mutuel ? Découvrez les clauses, documents et informations à vérifier pour comprendre le risque de change.",
+    "Vous avez un prêt en devise CHF au Crédit Mutuel ? Découvrez les clauses, documents et informations à vérifier pour comprendre le risque de change.",
   alternates: { canonical: `${SITE_URL}/guides/pret-en-devise-chf-credit-mutuel` },
   openGraph: {
-    title: "Prêt en devise CHF Crédit Mutuel : points à vérifier | Prêts CHF Info",
+    title: "Prêt en devise CHF Crédit Mutuel : clauses et risque de change | Prêts CHF Info",
     description:
-      "Vous avez souscrit un prêt en devise CHF auprès du Crédit Mutuel ? Découvrez les clauses, documents et informations à vérifier pour comprendre le risque de change.",
+      "Vous avez un prêt en devise CHF au Crédit Mutuel ? Découvrez les clauses, documents et informations à vérifier pour comprendre le risque de change.",
     url: `${SITE_URL}/guides/pret-en-devise-chf-credit-mutuel`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prêt en devise CHF Crédit Mutuel : points à vérifier | Prêts CHF Info",
+    title: "Prêt en devise CHF Crédit Mutuel : clauses et risque de change | Prêts CHF Info",
     description:
       "Clauses, documents et informations à vérifier pour un prêt en devise CHF souscrit auprès du Crédit Mutuel.",
   },
@@ -160,9 +160,9 @@ export default function GuideCreditMutuel() {
 
           <h2>Qu'est-ce qu'un prêt en devise CHF ?</h2>
           <p>
-            Un prêt en devise CHF est un prêt immobilier dont tout ou partie
-            des mécanismes financiers est lié au franc suisse. Il peut prendre
-            plusieurs formes.
+            Un prêt en devise CHF Crédit Mutuel est un prêt immobilier dont
+            tout ou partie des mécanismes financiers est lié au franc suisse.
+            Il peut prendre plusieurs formes.
           </p>
           <ul>
             <li>
@@ -213,6 +213,37 @@ export default function GuideCreditMutuel() {
             remises avant la signature et les tableaux d'amortissement. Aucune
             conclusion automatique ne peut être tirée du seul fait d'avoir
             souscrit un prêt CHF auprès du Crédit Mutuel.
+          </p>
+
+          <h2>Crédit Mutuel : les documents à retrouver en priorité</h2>
+          <ul className="article-checklist">
+            <li>offre de prêt</li>
+            <li>conditions particulières</li>
+            <li>conditions générales</li>
+            <li>notice d&apos;information</li>
+            <li>simulations de change</li>
+            <li>tableau d&apos;amortissement</li>
+            <li>avenants ou renégociations</li>
+            <li>décompte de remboursement anticipé</li>
+            <li>échanges écrits avec la banque</li>
+          </ul>
+          <p>
+            Le nom de la banque ne suffit jamais à conclure. L&apos;analyse
+            dépend du contrat signé, des informations remises et de la
+            situation précise de l&apos;emprunteur.
+          </p>
+          <p>
+            Ces pièces peuvent ensuite être rapprochées de la{" "}
+            <Link href="/jurisprudence">jurisprudence prêt CHF</Link>, de la{" "}
+            <Link href="/simulation">simulation indicative</Link>, du{" "}
+            <Link href="/blog/documents-pret-chf">
+              guide sur les documents prêt CHF
+            </Link>
+            , de la page sur le{" "}
+            <Link href="/guides/pret-toxique-franc-suisse">
+              prêt toxique en francs suisses
+            </Link>{" "}
+            ou du <Link href="/eligibilite">test d&apos;éligibilité</Link>.
           </p>
 
           <h2>Les clauses à relire dans un prêt en devise CHF</h2>

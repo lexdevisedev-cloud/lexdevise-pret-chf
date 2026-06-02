@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Mentions légales | Prêts CHF Info",
+  title: "Mentions légales",
   description:
     "Consultez les mentions légales du site Prêts CHF Info, plateforme indépendante d'information sur les prêts immobiliers en francs suisses.",
   alternates: {

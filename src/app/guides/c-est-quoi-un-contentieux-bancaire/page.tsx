@@ -4,12 +4,12 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "C'est quoi un contentieux bancaire ? Définition et exemples | Prêts CHF Info",
+  title: "C'est quoi un contentieux bancaire ? Définition et prêt CHF",
   description:
-    "Comprendre ce qu'est un contentieux bancaire, ses causes fréquentes, ses conséquences possibles et le cas particulier des prêts immobiliers en francs suisses.",
+    "Définition simple du contentieux bancaire, conséquences possibles et cas particulier des prêts immobiliers en francs suisses.",
   alternates: { canonical: `${SITE_URL}/guides/c-est-quoi-un-contentieux-bancaire` },
   openGraph: {
-    title: "C'est quoi un contentieux bancaire ? Définition et exemples | Prêts CHF Info",
+    title: "C'est quoi un contentieux bancaire ? Définition et prêt CHF | Prêts CHF Info",
     description:
       "Définition simple, causes fréquentes, conséquences possibles et lien avec les prêts immobiliers en francs suisses.",
     url: `${SITE_URL}/guides/c-est-quoi-un-contentieux-bancaire`,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "C'est quoi un contentieux bancaire ? Définition et exemples | Prêts CHF Info",
+    title: "C'est quoi un contentieux bancaire ? Définition et prêt CHF | Prêts CHF Info",
     description:
       "Définition simple d'un contentieux bancaire, ses causes et son lien avec les prêts immobiliers en francs suisses.",
   },
@@ -438,6 +438,32 @@ export default function GuideContentieuxDefinition() {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section className="article-retenir">
+            <p className="article-retenir-label">À lire aussi sur le contentieux bancaire</p>
+            <ul>
+              <li>
+                <Link href="/guides/contentieux-bancaire-pret-chf">
+                  Contentieux bancaire prêt CHF
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/consequences-contentieux-bancaire">
+                  Conséquences d&apos;un contentieux bancaire
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/banque-contentieux-pret-chf">
+                  Banque et contentieux prêt CHF
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/documents-pret-chf">
+                  Documents à vérifier pour un prêt CHF
+                </Link>
+              </li>
+            </ul>
           </section>
 
           <p className="article-legal">

@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt CHF frontalier : critères à vérifier | Prêts CHF Info",
+  title: "Prêt CHF frontalier : critères à vérifier",
   description:
     "Comprendre pourquoi un emprunteur frontalier ayant souscrit un prêt immobilier en francs suisses peut souhaiter vérifier son contrat, notamment lorsque le bien est situé en France.",
   alternates: { canonical: `${SITE_URL}/blog/pret-chf-frontalier` },

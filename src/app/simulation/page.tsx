@@ -6,17 +6,17 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.
 
 export const metadata: Metadata = {
   title:
-    "Simulateur prêt CHF : estimation indicative du préjudice | Prêts CHF Info",
+    "Simulation prêt CHF : estimation indicative du risque de change",
   description:
-    "Estimez de manière indicative l'impact financier potentiel d'un prêt immobilier en francs suisses ou indexé CHF. Simulation pédagogique, non juridique, à compléter par l'analyse du contrat et des documents bancaires.",
+    "Estimez de manière indicative l'impact d'un prêt immobilier en francs suisses : capital restant dû, risque de change et documents à vérifier.",
   alternates: {
     canonical: `${SITE_URL}/simulation`,
   },
   openGraph: {
     title:
-      "Simulateur prêt CHF : estimation indicative du préjudice | Prêts CHF Info",
+      "Simulation prêt CHF : estimation indicative du risque de change | Prêts CHF Info",
     description:
-      "Estimez de manière indicative l'impact financier potentiel d'un prêt immobilier en francs suisses ou indexé CHF. Simulation pédagogique, non juridique, à compléter par l'analyse du contrat et des documents bancaires.",
+      "Estimez de manière indicative l'impact d'un prêt immobilier en francs suisses : capital restant dû, risque de change et documents à vérifier.",
     url: `${SITE_URL}/simulation`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Simulateur prêt CHF : estimation indicative du préjudice | Prêts CHF Info",
+      "Simulation prêt CHF : estimation indicative du risque de change | Prêts CHF Info",
     description:
-      "Estimez de manière indicative l'impact financier potentiel d'un prêt immobilier en francs suisses ou indexé CHF. Simulation pédagogique, non juridique, à compléter par l'analyse du contrat et des documents bancaires.",
+      "Estimez de manière indicative l'impact d'un prêt immobilier en francs suisses : capital restant dû, risque de change et documents à vérifier.",
   },
 };
 

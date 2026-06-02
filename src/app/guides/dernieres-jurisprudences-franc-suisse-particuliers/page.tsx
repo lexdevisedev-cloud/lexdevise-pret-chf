@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Dernières jurisprudences franc suisse pour particuliers | Prêts CHF Info",
+  title: "Dernières jurisprudences franc suisse pour particuliers",
   description:
     "Synthèse pédagogique des dernières jurisprudences concernant les particuliers ayant souscrit un prêt immobilier en francs suisses ou indexé sur le CHF.",
   alternates: {

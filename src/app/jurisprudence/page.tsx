@@ -5,17 +5,17 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.
 
 export const metadata: Metadata = {
   title:
-    "Jurisprudence prêt CHF : recours, risque de change et clauses abusives | Prêts CHF Info",
+    "Jurisprudence prêt CHF 2025 : frontaliers, clauses abusives et recours",
   description:
-    "Comprendre les évolutions de jurisprudence sur les prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les recours possibles pour les emprunteurs frontaliers ou résidents en France.",
+    "Synthèse claire des décisions récentes sur les prêts en francs suisses : risque de change, frontaliers, clauses abusives, prescription et documents à vérifier.",
   alternates: {
     canonical: `${SITE_URL}/jurisprudence`,
   },
   openGraph: {
     title:
-      "Jurisprudence prêt CHF : recours, risque de change et clauses abusives | Prêts CHF Info",
+      "Jurisprudence prêt CHF 2025 : frontaliers, clauses abusives et recours | Prêts CHF Info",
     description:
-      "Comprendre les évolutions de jurisprudence sur les prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les recours possibles pour les emprunteurs frontaliers ou résidents en France.",
+      "Synthèse claire des décisions récentes sur les prêts en francs suisses : risque de change, frontaliers, clauses abusives, prescription et documents à vérifier.",
     url: `${SITE_URL}/jurisprudence`,
     siteName: "Prêts CHF Info",
     locale: "fr_FR",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Jurisprudence prêt CHF : recours, risque de change et clauses abusives | Prêts CHF Info",
+      "Jurisprudence prêt CHF 2025 : frontaliers, clauses abusives et recours | Prêts CHF Info",
     description:
-      "Comprendre les évolutions de jurisprudence sur les prêts immobiliers en francs suisses, le risque de change, les clauses abusives et les recours possibles pour les emprunteurs frontaliers ou résidents en France.",
+      "Synthèse claire des décisions récentes sur les prêts en francs suisses : risque de change, frontaliers, clauses abusives, prescription et documents à vérifier.",
   },
 };
 
@@ -497,6 +497,68 @@ export default function JurisprudencePage() {
               Contenu pédagogique — ne constitue pas un avis juridique personnalisé.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="home-section white-section">
+        <div className="section-inner juri-section-inner">
+          <div className="juri-section-header">
+            <h2>Ce qu&apos;il faut retenir en 2025</h2>
+            <p className="juri-section-intro">
+              Les décisions récentes donnent un cadre de lecture utile, mais
+              chaque situation dépend du contrat, des documents remis et du
+              parcours de l&apos;emprunteur.
+            </p>
+          </div>
+          <div className="juri-four-grid">
+            <article className="juri-revirement-card">
+              <h3>Le risque de change doit être compris concrètement.</h3>
+              <p>
+                La question n&apos;est pas seulement de savoir si le contrat
+                mentionne le risque, mais si l&apos;emprunteur pouvait en
+                comprendre les conséquences économiques.
+              </p>
+            </article>
+            <article className="juri-revirement-card">
+              <h3>Les frontaliers ne sont pas automatiquement exclus.</h3>
+              <p>
+                Le fait de percevoir des revenus en francs suisses ne suffit
+                pas toujours à écarter l&apos;analyse du risque sur toute la
+                durée du prêt.
+              </p>
+            </article>
+            <article className="juri-revirement-card">
+              <h3>Les documents remis avant signature restent déterminants.</h3>
+              <p>
+                Offre de prêt, notice, simulations, tableaux d&apos;amortissement
+                et échanges avec la banque sont essentiels.
+              </p>
+            </article>
+            <article className="juri-revirement-card">
+              <h3>Une jurisprudence favorable ne garantit pas un recours.</h3>
+              <p>
+                Chaque dossier dépend du contrat, des dates, des documents
+                remis et de la situation personnelle.
+              </p>
+            </article>
+          </div>
+          <p className="juri-section-intro" style={{ marginTop: "28px" }}>
+            Pour poursuivre la lecture, consultez le{" "}
+            <Link href="/guides/dernieres-jurisprudences-franc-suisse-particuliers">
+              guide sur les dernières jurisprudences franc suisse
+            </Link>
+            , la page dédiée aux{" "}
+            <Link href="/guides/pret-frontalier-suisse-chf">
+              prêts frontaliers Suisse et CHF
+            </Link>
+            , la liste des{" "}
+            <Link href="/blog/documents-pret-chf">
+              documents à vérifier
+            </Link>
+            , le{" "}
+            <Link href="/eligibilite">test d&apos;éligibilité</Link> ou la{" "}
+            <Link href="/simulation">simulation indicative</Link>.
+          </p>
         </div>
       </section>
 

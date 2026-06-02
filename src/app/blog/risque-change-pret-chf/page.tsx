@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF | Prêts CHF Info",
+  title: "Risque de change prêt CHF : comprendre l'impact EUR/CHF",
   description:
     "Comprendre comment le taux EUR/CHF peut influencer la contrevaleur d'un prêt immobilier en francs suisses, le capital restant dû et les situations de revente ou remboursement anticipé.",
   alternates: { canonical: `${SITE_URL}/blog/risque-change-pret-chf` },

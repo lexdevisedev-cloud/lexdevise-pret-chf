@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "À propos | Prêts CHF Info",
+  title: "À propos",
   description:
     "Découvrez la vocation de Prêts CHF Info, site indépendant d'information sur les prêts immobiliers en francs suisses, le risque de change et les critères d'analyse d'un dossier CHF.",
   alternates: {

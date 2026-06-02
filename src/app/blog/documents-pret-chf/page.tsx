@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Documents prêt CHF : pièces utiles pour vérifier un dossier | Prêts CHF Info",
+  title: "Documents prêt CHF : pièces utiles pour vérifier un dossier",
   description:
     "Liste des documents utiles pour vérifier un prêt immobilier en francs suisses : offre de prêt, notices, simulations, tableaux d'amortissement, avenants et échanges avec la banque.",
   alternates: { canonical: `${SITE_URL}/blog/documents-pret-chf` },

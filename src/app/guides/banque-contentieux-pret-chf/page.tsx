@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Banque et contentieux prêt CHF : points de vigilance | Prêts CHF Info",
+  title: "Banque et contentieux prêt CHF : points de vigilance",
   description:
     "Comprendre les points de vigilance lorsqu'un désaccord avec une banque concerne un prêt immobilier en francs suisses : information, clauses, risque de change et documents.",
   alternates: { canonical: `${SITE_URL}/guides/banque-contentieux-pret-chf` },
@@ -421,6 +421,32 @@ export default function GuideBanqueContentieuxCHF() {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section className="article-retenir">
+            <p className="article-retenir-label">À lire aussi sur le contentieux bancaire</p>
+            <ul>
+              <li>
+                <Link href="/guides/c-est-quoi-un-contentieux-bancaire">
+                  C&apos;est quoi un contentieux bancaire ?
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/contentieux-bancaire-pret-chf">
+                  Contentieux bancaire prêt CHF
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/consequences-contentieux-bancaire">
+                  Conséquences d&apos;un contentieux bancaire
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/documents-pret-chf">
+                  Documents à vérifier pour un prêt CHF
+                </Link>
+              </li>
+            </ul>
           </section>
 
           <p className="article-legal">

@@ -4,9 +4,9 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt CHF : recours, risque de change et simulation | Prêts CHF Info",
+  title: "Prêt CHF : recours, risque de change et simulation",
   description:
-    "Comprenez les prêts immobiliers en francs suisses, le risque de change, la jurisprudence récente et les critères à vérifier. Test d'éligibilité gratuit et simulation indicative.",
+    "Comprendre votre prêt immobilier en francs suisses : risque de change, jurisprudence, documents à vérifier, test d'éligibilité et simulation indicative.",
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     title: "Prêt CHF : recours, risque de change et simulation | Prêts CHF Info",
@@ -812,31 +812,30 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 12. GUIDES PRATIQUES ──────────────────────────────────────── */}
+        {/* ── 12. GUIDES LES PLUS CONSULTÉS ─────────────────────────────── */}
         <section className="home-section white-section">
           <div className="section-inner home-section-pad">
             <div className="home-section-header">
               <p className="eyebrow">Guides pratiques</p>
-              <h2>Guides pratiques sur les prêts CHF</h2>
+              <h2>Guides les plus consultés</h2>
               <p>
-                Approfondissez les situations fréquentes liées aux prêts
-                immobiliers en francs suisses : frontaliers, risque de change,
-                contentieux bancaire, banque prêteuse, jurisprudence et
-                documents à vérifier.
+                Approfondissez les situations les plus fréquentes liées aux
+                prêts immobiliers en francs suisses : risque de change,
+                frontaliers, contentieux bancaire, banque prêteuse et
+                jurisprudence.
               </p>
             </div>
             <div className="blog-grid">
-              <Link href="/guides/pret-en-devise-chf-credit-mutuel" className="blog-card">
-                <span className="blog-card-cat">Banques prêteuses</span>
-                <h3 className="blog-card-title">Prêt en devise CHF Crédit Mutuel</h3>
+              <Link href="/jurisprudence" className="blog-card">
+                <span className="blog-card-cat">Jurisprudence</span>
+                <h3 className="blog-card-title">Jurisprudence prêt CHF</h3>
                 <p className="blog-card-desc">
-                  Les points à vérifier lorsqu&apos;un prêt immobilier en devise
-                  CHF a été souscrit auprès du Crédit Mutuel : clauses,
-                  documents et risque de change.
+                  Comprendre les décisions récentes, le risque de change, les
+                  frontaliers, les clauses abusives et les documents à vérifier.
                 </p>
                 <div className="blog-card-footer">
-                  <span className="blog-card-time">8 min de lecture</span>
-                  <span className="blog-card-link">Lire le guide →</span>
+                  <span className="blog-card-time">Synthèse</span>
+                  <span className="blog-card-link">Lire la page →</span>
                 </div>
               </Link>
 
@@ -854,13 +853,12 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              <Link href="/guides/contentieux-bancaire-pret-chf" className="blog-card">
-                <span className="blog-card-cat">Contentieux</span>
-                <h3 className="blog-card-title">Contentieux bancaire prêt CHF</h3>
+              <Link href="/guides/pret-en-devise-chf-credit-mutuel" className="blog-card">
+                <span className="blog-card-cat">Banques prêteuses</span>
+                <h3 className="blog-card-title">Prêt en devise CHF Crédit Mutuel</h3>
                 <p className="blog-card-desc">
-                  Les principales causes de litige liées aux prêts immobiliers
-                  en francs suisses : risque de change, information
-                  précontractuelle, clauses et documents.
+                  Les clauses, documents et informations à vérifier pour un
+                  prêt en devise CHF souscrit auprès du Crédit Mutuel.
                 </p>
                 <div className="blog-card-footer">
                   <span className="blog-card-time">8 min de lecture</span>
@@ -882,31 +880,29 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              <Link href="/guides/dernieres-jurisprudences-franc-suisse-particuliers" className="blog-card">
-                <span className="blog-card-cat">Jurisprudence</span>
-                <h3 className="blog-card-title">Dernières jurisprudences franc suisse pour particuliers</h3>
+              <Link href="/guides/contentieux-bancaire-pret-chf" className="blog-card">
+                <span className="blog-card-cat">Contentieux</span>
+                <h3 className="blog-card-title">Contentieux bancaire prêt CHF</h3>
                 <p className="blog-card-desc">
-                  Synthèse des décisions récentes — Cour de cassation 2024 et
-                  2025, CJUE — concernant les particuliers ayant souscrit un
-                  prêt CHF en France.
+                  Les litiges possibles liés aux prêts CHF : risque de change,
+                  information bancaire, clauses et documents.
                 </p>
                 <div className="blog-card-footer">
-                  <span className="blog-card-time">7 min de lecture</span>
+                  <span className="blog-card-time">8 min de lecture</span>
                   <span className="blog-card-link">Lire le guide →</span>
                 </div>
               </Link>
 
-              <Link href="/guides/c-est-quoi-un-contentieux-bancaire" className="blog-card">
-                <span className="blog-card-cat">Contentieux</span>
-                <h3 className="blog-card-title">C&apos;est quoi un contentieux bancaire ?</h3>
+              <Link href="/simulation" className="blog-card">
+                <span className="blog-card-cat">Simulation</span>
+                <h3 className="blog-card-title">Simulation prêt CHF</h3>
                 <p className="blog-card-desc">
-                  Définition simple d&apos;un contentieux bancaire, ses causes
-                  fréquentes, ses conséquences possibles et le lien avec les
-                  prêts immobiliers en francs suisses.
+                  Estimer de manière indicative l&apos;impact du risque de change
+                  sur un prêt immobilier lié au franc suisse.
                 </p>
                 <div className="blog-card-footer">
-                  <span className="blog-card-time">6 min de lecture</span>
-                  <span className="blog-card-link">Lire le guide →</span>
+                  <span className="blog-card-time">Outil indicatif</span>
+                  <span className="blog-card-link">Accéder à l&apos;outil →</span>
                 </div>
               </Link>
             </div>

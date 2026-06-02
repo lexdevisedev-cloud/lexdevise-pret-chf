@@ -5,7 +5,7 @@ import EligibilityQuiz from "./EligibilityQuiz";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Éligibilité recours prêt CHF : test en 3 questions | Prêts CHF Info",
+  title: "Éligibilité recours prêt CHF : test en 3 questions",
   description:
     "Répondez à 3 questions pour identifier les principaux signaux d'un prêt immobilier en francs suisses ou indexé CHF pouvant justifier une première analyse de votre dossier.",
   alternates: {

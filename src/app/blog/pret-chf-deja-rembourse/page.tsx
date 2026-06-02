@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt CHF déjà remboursé : analyse possible ? | Prêts CHF Info",
+  title: "Prêt CHF déjà remboursé : analyse possible ?",
   description:
     "Un prêt en francs suisses déjà remboursé, renégocié ou soldé peut parfois mériter une vérification selon les dates, les documents disponibles et la situation du dossier.",
   alternates: { canonical: `${SITE_URL}/blog/pret-chf-deja-rembourse` },

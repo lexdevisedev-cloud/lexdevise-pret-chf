@@ -4,12 +4,12 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Prêt toxique en francs suisses : comprendre les risques | Prêts CHF Info",
+  title: "Prêt toxique en francs suisses : dette, risque de change et recours",
   description:
-    "Comprendre pourquoi certains prêts immobiliers en francs suisses peuvent être perçus comme des prêts toxiques : risque de change, capital restant dû, clauses et information bancaire.",
+    "Comprendre pourquoi certains prêts CHF sont perçus comme toxiques : dette en francs suisses, risque de change, capital restant dû et information bancaire.",
   alternates: { canonical: `${SITE_URL}/guides/pret-toxique-franc-suisse` },
   openGraph: {
-    title: "Prêt toxique en francs suisses : comprendre les risques | Prêts CHF Info",
+    title: "Prêt toxique en francs suisses : dette, risque de change et recours | Prêts CHF Info",
     description:
       "Risque de change, capital restant dû, clauses de conversion : pourquoi certains prêts CHF sont perçus comme toxiques et comment vérifier son dossier.",
     url: `${SITE_URL}/guides/pret-toxique-franc-suisse`,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prêt toxique en francs suisses : comprendre les risques | Prêts CHF Info",
+    title: "Prêt toxique en francs suisses : dette, risque de change et recours | Prêts CHF Info",
     description:
       "Risque de change, capital restant dû, clauses de conversion : pourquoi certains prêts CHF sont perçus comme toxiques.",
   },
@@ -188,6 +188,31 @@ export default function GuidePretToxique() {
             suffise à établir un manquement de la banque à ses obligations
             d'information. À l'inverse, un contrat peut comporter des clauses
             problématiques sans que l'emprunteur ait utilisé ce terme.
+          </p>
+
+          <h2>Pourquoi cette page peut vous concerner ?</h2>
+          <ul>
+            <li>
+              Votre capital restant dû semble avoir augmenté malgré les
+              remboursements.
+            </li>
+            <li>
+              Votre prêt immobilier dépend du franc suisse ou d&apos;une
+              conversion CHF/EUR.
+            </li>
+            <li>
+              Vous souhaitez comprendre si les documents remis expliquaient
+              clairement le risque de change.
+            </li>
+          </ul>
+          <p>
+            Vous pouvez compléter cette première lecture avec la{" "}
+            <Link href="/simulation">simulation indicative</Link>, le{" "}
+            <Link href="/eligibilite">test d&apos;éligibilité</Link>, la{" "}
+            <Link href="/jurisprudence">jurisprudence prêt CHF</Link> et le{" "}
+            <Link href="/blog/documents-pret-chf">
+              guide des documents à vérifier
+            </Link>.
           </p>
 
           <h2>Pourquoi certains prêts CHF peuvent être perçus comme toxiques</h2>

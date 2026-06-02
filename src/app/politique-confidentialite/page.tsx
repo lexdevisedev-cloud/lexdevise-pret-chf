@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité | Prêts CHF Info",
+  title: "Politique de confidentialité",
   description:
     "Découvrez comment Prêts CHF Info collecte, utilise et protège les données personnelles transmises via ses formulaires.",
   alternates: {

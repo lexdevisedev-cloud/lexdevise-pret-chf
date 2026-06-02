@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.pret-chf-gouv.org";
 
 export const metadata: Metadata = {
-  title: "Clause abusive prêt CHF : les points à vérifier | Prêts CHF Info",
+  title: "Clause abusive prêt CHF : les points à vérifier",
   description:
     "Comprendre les clauses à examiner dans un prêt immobilier en francs suisses : devise, conversion, remboursement, risque de change, transparence et documents bancaires.",
   alternates: { canonical: `${SITE_URL}/blog/clause-abusive-pret-chf` },
