@@ -26,8 +26,6 @@ interface FormValues {
   montantCredit: string;
   duree: string;
   consentement: boolean;
-  // honeypot
-  company: string;
 }
 
 interface FieldErrors {
@@ -55,7 +53,6 @@ const INITIAL: FormValues = {
   montantCredit: "",
   duree: "",
   consentement: false,
-  company: "",
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -166,13 +163,15 @@ export default function SimulationClient() {
           duree: form.duree,
           consentement: form.consentement,
           estimation,
-          company: form.company,
+          contact_website_check: "",
         }),
       });
 
+      const result = await res.json();
+
       setResult(computed);
 
-      if (res.ok) {
+      if (res.ok && result.success === true) {
         setSubmitStatus("success");
       } else {
         setSubmitStatus("emailError");
@@ -209,21 +208,25 @@ export default function SimulationClient() {
 
             <form onSubmit={handleSubmit} noValidate>
 
-              {/* Honeypot — invisible pour les humains */}
-              <div className="sim-honeypot" aria-hidden="true">
-                <label htmlFor="sim-company">
-                  Ne pas remplir
-                  <input
-                    id="sim-company"
-                    name="company"
-                    type="text"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    value={form.company}
-                    onChange={(e) => setField("company", e.target.value)}
-                  />
-                </label>
-              </div>
+              {/* Honeypot — invisible, jamais rempli par les humains */}
+              <input
+                type="text"
+                name="contact_website_check"
+                defaultValue=""
+                autoComplete="off"
+                tabIndex={-1}
+                aria-hidden="true"
+                data-1p-ignore
+                data-lpignore="true"
+                style={{
+                  position: "absolute",
+                  left: "-9999px",
+                  width: "1px",
+                  height: "1px",
+                  opacity: 0,
+                  pointerEvents: "none",
+                }}
+              />
 
               <div className="sim-form-grid">
 
